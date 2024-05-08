@@ -9,6 +9,7 @@
     display: flex;
 }
 
+
 .nav-bar li {
     flex: 1;
     color: white;
@@ -54,4 +55,8 @@
 .lang-logo > img {
     height: 50px;
     width: 50px;
+}
+
+h1 {
+    font-size: 2em;
 }
