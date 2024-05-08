@@ -1,0 +1,57 @@
+.container {
+    /* display: flex; */
+    background-color: rgb(65, 16, 121);
+    padding: 2px;
+    
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar li {
+    flex: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    list-style: none;
+    margin: 5px;
+}
+
+.nav-bar .box1 {
+    flex: 4;
+}
+
+.second-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid;
+}
+
+.about-me {
+    border: 1px solid black;
+    flex: 1;
+}
+
+.langlogo-cont {
+    display: flex;
+    border: 1px solid;
+    flex: 1;
+}
+
+.langlogo-cont > .langlogo li {
+    flex: 1;
+    border: 1px solid;
+    list-style: none;
+}
+
+.languages {
+    border: 2px solid;
+    flex: 1;
+}
+
+.lang-logo > img {
+    height: 50px;
+    width: 50px;
+}
