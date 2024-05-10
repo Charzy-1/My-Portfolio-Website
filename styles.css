@@ -1,56 +1,108 @@
-body { 
-    font-family: sans-serif; margin: 0;
- }
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
 
-a { 
-    color: white;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-decoration: none;
-    padding: 20px 5px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s;
- }
+a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
 
 a:hover { background: gray; }
 
-.container { 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 20px;
- }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 /* flex container */
-.flex-nav ul { 
-    background: black; 
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex;
- }
+.flex-nav ul {
+  background: black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
 .flex-nav li { flex: 1; }
 
-.flex-nav .logo { color: yellow; flex: 3; padding: 20px 20px; }
+.flex-nav .logo {
+  color: rgb(216, 77, 13);
+  flex: 3;
+  padding: 20px 20px;
+}
 
-.headline ul { display: flex; background: rgb(32, 23, 23); list-style: none; margin: 0; }
+.headline {
+  display: flex;
+  background: rgb(32, 23, 23);
+  margin: 0;
+}
 
-@media all and (max-width: 768x) {
+.social-icons {
+  padding: 50px 5px;
+  width: 10%;
+}
 
-    .flex-nav ul {
-        flex-wrap: wrap;
-    }
+.social-icons ul {
+  margin: 0;
+  padding: 0;
 
-    .flex-nav li {
-        flex: 1 1 50%;
-    }
+  /* display: flex; */
+}
+
+.social-icons li {
+  list-style: none;
+
+  /* margin: 0;
+    padding: 0; */
+}
+
+.social-icons img {
+  height: 30px;
+}
+
+.Aboutme {
+  width: 40%;
+}
+
+.Aboutme ul {
+  list-style: none;
+}
+
+.background-image {
+  width: 1000%;
+}
+
+.Aboutme h1 {
+  color: rgb(216, 77, 13);
+}
+
+.Aboutme h2,
+p {
+  color: white;
+  font-family: sans-serif;
+}
+
+@media all and (max-width: 768px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
 }
 
 @media all and (max-width: 375px) {
-    
-    .flex-nav li {
-        flex-basis: 1 1 100%;
-    }
-} 
+  .flex-nav li {
+    flex-basis: 1 1 100%;
+  }
+}
