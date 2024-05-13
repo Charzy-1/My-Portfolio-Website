@@ -37,7 +37,6 @@ a:hover {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid red;
 }
 
 .flex-nav ul {
@@ -66,7 +65,7 @@ a:hover {
 
 .headline {
   display: flex;
-  background: rgb(32, 23, 23);
+  background: black;
   margin: 0;
   padding: 0;
 }
@@ -108,7 +107,7 @@ a:hover {
   font-size: 50px;
 }
 
-.Aboutme h2,
+h2,
 p {
   color: white;
   font-family: sans-serif;
@@ -123,11 +122,12 @@ p {
 }
 
 .workimage {
-  padding: 10px;
+  padding: 20px;
 }
 
 #paragraph {
   color: black;
+  line-height: 30px;
 }
 
 .workimage img {
@@ -135,6 +135,78 @@ p {
   width: 500px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.grid-container img {
+  height: 300px;
+  width: 300px;
+}
+
+.aboutme-footer {
+  display: flex;
+  background-color: black;
+}
+
+.aboutme-class {
+  padding-left: 80px;
+}
+
+.aboutme-class h1 {
+  color: rgb(216, 77, 13);
+  font-size: 50px;
+}
+
+hr {
+  color: white;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background: black;
+  gap: 10px;
+  padding: 30px 20px;
+}
+
+.category li {
+  color: white;
+  list-style: none;
+  padding: 0;
+  line-height: 30px;
+}
+
+button {
+  background-color: rgb(216, 77, 13);
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(156, 57, 11);
+}
+
+.multipost-skill {
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   .flex-nav ul {
@@ -164,5 +236,22 @@ p {
     display: flex;
     flex-direction: column;
   }
-}
 
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  }
+
+  .aboutme-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .first-work-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
