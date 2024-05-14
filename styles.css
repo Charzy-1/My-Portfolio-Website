@@ -1,11 +1,7 @@
-html {
+* {
   box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -34,9 +30,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100vw;
 }
 
 .flex-nav ul {
@@ -44,16 +38,15 @@ a:hover {
   list-style: none;
   margin: 0;
   display: flex;
-}
-
-.flex-nav img {
-  height: 40px;
+  width: 100vw;
+  position: static;
 }
 
 .flex-nav li {
   flex: 1;
   text-align: left;
 }
+
 
 .flex-nav .logo {
   color: white;
@@ -65,7 +58,10 @@ a:hover {
 
 .headline {
   display: flex;
-  background: rgb(32, 23, 23);
+  justify-content: space-between;
+  width: 100%;
+  height: 80vh;
+  background: black;
   margin: 0;
   padding: 0;
 }
@@ -91,9 +87,13 @@ a:hover {
   height: 40px;
 }
 
+.Aboutme .intro {
+  font-size: 5rem;
+}
+
 .Aboutme {
-  width: 40%;
-  padding: 30px;
+  width: 50%;
+  padding-top: 50px;
 }
 
 .Aboutme ul {
@@ -102,17 +102,29 @@ a:hover {
   padding: 0;
 }
 
+.backround-image {
+  width: 29%;
+}
+
 .Aboutme h1 {
   color: rgb(216, 77, 13);
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .Aboutme h2,
 p {
   color: white;
   font-family: sans-serif;
+  line-height: 50px;
+  font-size: 1.5em;
 }
 
+.Aboutme h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+/* 
 @media (min-width: 375px) and (max-width: 768px) {
   .flex-nav ul {
     flex-wrap: wrap;
@@ -141,4 +153,4 @@ p {
     display: flex;
     flex-direction: column;
   }
-}
+} */
