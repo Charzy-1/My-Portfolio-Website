@@ -2,12 +2,57 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 100vw;
 }
 
 body {
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
+  font-family: Bookman system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+  background: rgb(77, 70, 70);
+  width: 100vw;
+  padding: 20px 30px;
+  height: 80px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav li {
+  display: inline-block;
+
+  /* line-height: 80px; */
+
+  /* flex: 1;
+  text-align: right;
+  list-style: none; */
+}
+
+.checkbtn {
+  font-size: 25px;
+  color: white;
+  line-height: 50px;
+  float: right;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+nav .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 15px;
 }
 
 a {
@@ -17,130 +62,140 @@ a {
   text-decoration: none;
   display: inline-block;
   width: 100%;
-  text-align: center;
+
+  /* text-align: center; */
   transition: all 0.5s;
 }
 
-.navscontent {
-  padding: 30px 5px;
-}
-
 a:hover {
-  background: gray;
-}
-
-.container {
-  width: 100vw;
-}
-
-.flex-nav ul {
-  background: rgb(58, 55, 55);
-  list-style: none;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-}
-
-.flex-nav li {
-  flex: 1;
-  text-align: left;
-}
-
-.flex-nav .logo {
-  color: white;
-  flex: 5;
-  padding: 30px 190px;
-  font-size: 2em;
-  font-weight: bold;
+  background: rgb(184, 163, 163);
 }
 
 .headline {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  margin: 0;
-  padding: 0;
-}
-
-.social-icons {
-  padding-top: 250px;
-  margin-bottom: 0;
-  padding-left: 50px;
-}
-
-.social-icons ul {
-  margin: 0;
-  padding: 0;
-}
-
-.social-icons li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Aboutme .intro {
-  font-size: 5rem;
-}
-
-.Aboutme {
-  padding: 150px 100px;
-}
-
-.Aboutme ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  background-color: black;
+  padding: 100px 30px 10px;
 }
 
 .Aboutme h1 {
-  color: rgb(216, 77, 13);
-  font-size: 40px;
-}
-
-.Aboutme h2,
-p {
-  color: white;
-  font-family: sans-serif;
-  line-height: 50px;
-  font-size: 1.5em;
+  color: rgb(236, 126, 22);
+  font-size: 3.7em;
 }
 
 .Aboutme h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  color: rgb(236, 126, 22);
   font-size: 2em;
+  margin-bottom: 10px;
 }
 
-/*
-@media (min-width: 375px) and (max-width: 768px) {
-  .flex-nav ul {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
+.Aboutme h3 {
+  color: white;
+  margin-bottom: 10px;
+}
 
-  .flex-nav li {
-    flex-basis: 100%;
-    padding: 0;
-    text-align: center;
-  }
+.Aboutme p {
+  color: white;
+}
 
-  .social-icons ul {
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons ul {
+  display: flex;
+}
+
+.social-icons .github {
+  height: 40px;
+  width: 40px;
+}
+
+.social-icons .banner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media only screen and (min-width: 375px) {
+  nav li {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav ul {
     display: flex;
-    justify-content: center;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .checkbtn {
+    display: none;
+  }
+
+
+  nav .logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 15px;
+  }
+
+  .backround-image img {
+    content: url("./images/Backgroundimage\ \(2\).png");
+    height: 500px;
+  }
+
+  .backround-image {
+    order: 3;
+  }
+
+  .Aboutme {
+    order: 2;
+    padding: 20px;
+    padding-top: 50px;
   }
 
   .headline {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    /* width: 84vw; */
+    height: 70vh;
+    margin: 0;
     padding: 0;
   }
 
-  .container {
-    display: flex;
+  .social-icons {
+    padding-top: 100px;
+    margin-bottom: 0;
+    padding-left: 15px;
+    order: 1;
+  }
+
+  .social-icons ul {
+    margin: 0;
+    padding-right: 10px;
     flex-direction: column;
   }
-} */
+
+  nav {
+    height: 100px;
+  }
+
+  .Aboutme h1 {
+    font-size: 50px;
+  }
+
+  .Aboutme h2 {
+    font-size: 30px;
+  }
+
+  .Aboutme h3 {
+    font-size: 20px;
+  }
+
+  .Aboutme p {
+    font-size: 20px;
+  }
+}
