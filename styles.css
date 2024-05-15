@@ -39,7 +39,6 @@ a:hover {
   margin: 0;
   display: flex;
   width: 100vw;
-  position: static;
 }
 
 .flex-nav li {
@@ -49,9 +48,9 @@ a:hover {
 
 .flex-nav .logo {
   color: white;
-  flex: 3;
-  padding: 30px 30px;
-  font-size: 20px;
+  flex: 5;
+  padding: 30px 190px;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -59,16 +58,16 @@ a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background: black;
   margin: 0;
   padding: 0;
 }
 
 .social-icons {
-  padding-top: 150px;
-  width: 10%;
+  padding-top: 200px;
   margin-bottom: 0;
+  padding-left: 50px;
 }
 
 .social-icons ul {
@@ -82,27 +81,18 @@ a:hover {
   padding: 0;
 }
 
-.social-icons img {
-  height: 40px;
-}
-
 .Aboutme .intro {
   font-size: 5rem;
 }
 
 .Aboutme {
-  width: 50%;
-  padding-top: 50px;
+  padding: 100px;
 }
 
 .Aboutme ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.backround-image {
-  width: 29%;
 }
 
 .Aboutme h1 {
