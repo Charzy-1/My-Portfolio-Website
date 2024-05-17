@@ -1,200 +1,236 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
-}
-
-.container {
-  width: 100vw;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Bookman system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --color-1: #524c42;
+  --text-color: #fbf8dd;
+  --accent-color: #e8751a;
 }
 
-nav {
-  background: rgb(77, 70, 70);
-  width: 100vw;
-  padding: 20px 30px;
-  height: 80px;
-}
-
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-nav li {
-  display: inline-block;
-
-  /* line-height: 80px; */
-
-  /* flex: 1;
-  text-align: right;
-  list-style: none; */
-}
-
-.checkbtn {
-  font-size: 25px;
-  color: white;
-  line-height: 50px;
-  float: right;
-  cursor: pointer;
-}
-
-#check {
-  display: none;
-}
-
-nav .logo {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0 15px;
-}
-
-a {
-  color: white;
-  font-weight: 100;
-  letter-spacing: 2px;
-  text-decoration: none;
-  display: inline-block;
+.nav-bar {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color-1);
+  padding: 20px 20px;
+}
 
-  /* text-align: center; */
-  transition: all 0.5s;
+.nav-bar .logo {
+  color: var(--text-color);
+  font-size: 15px;
+  padding-left: 70px;
+}
+
+.menu {
+  display: flex;
+  padding-right: 80px;
+}
+
+.menu li {
+  padding-left: 30px;
 }
 
 a:hover {
-  background: rgb(184, 163, 163);
+  background: black;
+  height: 30px;
+  padding: 5px;
 }
 
-.headline {
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  align-items: center;
+}
+
+.openmenu,
+.closemenu {
+  color: var(--text-color);
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.openmenu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.closemenu {
+  top: 20px;
+  right: 20px;
+}
+
+#check { display: none; }
+
+.banner {
+  background: url("./images/Backgroundimage (2).png") no-repeat right center;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
-  padding: 100px 30px 10px;
 }
 
-.Aboutme h1 {
-  color: rgb(236, 126, 22);
-  font-size: 3.7em;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
-.Aboutme h2 {
-  color: rgb(236, 126, 22);
-  font-size: 2em;
+.banner-content {
+  max-width: 50%;
+  color: white;
+  padding: 20px;
+}
+
+.banner-content h1,
+.banner-content h2,
+.banner-content h3,
+.banner-content p {
   margin-bottom: 10px;
 }
 
-.Aboutme h3 {
-  color: white;
-  margin-bottom: 10px;
+.banner-content h1 {
+  color: var(--accent-color);
+  font-size: 4rem;
 }
 
-.Aboutme p {
-  color: white;
+.banner-content h2 {
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+.banner-content h3 {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.banner-content p {
+  color: var(--text-color);
+  font-size: 1.5rem;
 }
 
 .social-icons {
-  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
 }
 
 .social-icons ul {
-  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.social-icons .github {
-  height: 40px;
-  width: 40px;
+.social-icons li {
+  margin: 0;
+  padding: 0;
 }
 
-.social-icons .banner {
-  padding-top: 0;
-  padding-bottom: 0;
+.social-icons li a {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-@media only screen and (min-width: 375px) {
-  nav li {
-    display: none;
+.social-icons li a img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color-1);
+    transition: all 0.5s ease-in-out;
   }
-}
 
-@media only screen and (min-width: 768px) {
-  nav ul {
-    display: flex;
+  .menu li {
+    margin-top: 30px;
   }
 
-  nav li {
-    display: inline-block;
+  .menu li a {
     padding: 10px;
   }
 
-  .checkbtn {
-    display: none;
+  .openmenu,
+  .closemenu {
+    display: block;
   }
 
-  nav .logo {
-    font-size: 25px;
-    font-weight: bold;
-    padding: 0 15px;
+  #check:checked ~ .menu { right: 0; }
+
+  .nav-bar .logo {
+    padding-left: 42px;
   }
 
-  .backround-image img {
-    content: url("./images/Backgroundimage\ \(2\).png");
-    height: 500px;
+  .banner {
+    background: url("./images/mobilbackground.png") no-repeat right center;
+    background-color: black;
   }
 
-  .backround-image {
-    order: 3;
+  .banner-content {
+    max-width: 90%;
+    text-align: rish;
   }
 
-  .Aboutme {
-    order: 2;
-    padding: 20px;
-    padding-top: 50px;
-  }
-
-  .headline {
-    display: flex;
-    justify-content: space-between;
-
-    /* width: 84vw; */
-    height: 70vh;
-    margin: 0;
-    padding: 0;
-  }
-
-  .social-icons {
-    padding-top: 100px;
-    margin-bottom: 0;
-    padding-left: 15px;
-    order: 1;
-  }
-
-  .social-icons ul {
-    margin: 0;
-    padding-right: 10px;
+  .container {
     flex-direction: column;
   }
 
-  nav {
-    height: 100px;
+  .social-icons ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
   }
 
-  .Aboutme h1 {
-    font-size: 50px;
+  .social-icons {
+    position: absolute;
+    bottom: 30px;
+    left: 33%;
+    transform: translateX(-50%);
   }
 
-  .Aboutme h2 {
-    font-size: 30px;
+  .banner-content h1 {
+    font-size: 3rem;
   }
 
-  .Aboutme h3 {
-    font-size: 20px;
+  .banner-content h2 {
+    font-size: 2rem;
   }
 
-  .Aboutme p {
-    font-size: 20px;
+  .banner-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
   }
 }
