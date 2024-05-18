@@ -79,7 +79,7 @@ a:hover {
   background: url("./images/Backgroundimage (2).png") no-repeat right center;
   background-size: contain;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,7 @@ a:hover {
 
 .banner-content h2 {
   color: var(--accent-color);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .banner-content h3 {
@@ -176,10 +176,6 @@ a:hover {
     margin-top: 30px;
   }
 
-  .menu li a {
-    padding: 10px;
-  }
-
   .openmenu,
   .closemenu {
     display: block;
@@ -192,7 +188,7 @@ a:hover {
   }
 
   .banner {
-    background: url("./images/mobilbackground.png") no-repeat right center;
+    background: url("./images/mobilbackground.png") no-repeat right bottom;
     background-color: black;
   }
 
@@ -223,11 +219,46 @@ a:hover {
   }
 
   .banner-content h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .banner-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    background-image: url("./images/mobilbackground.png"); /* Updated path */
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Position at bottom right */
+    background-size: auto; /* Maintain image aspect ratio */
+    margin: 0 auto;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .nav-bar .logo {
+    display: none;
+  }
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .banner-content h2 {
+    font-size: 1rem;
+  }
+
+  .banner-content h3 {
+    font-size: 0.7rem;
   }
 
   .banner-content p {
