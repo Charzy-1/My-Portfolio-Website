@@ -207,7 +207,7 @@ a:hover {
 
   .social-icons {
     position: absolute;
-    bottom: 300px;
+    bottom: 120px;
     left: 28%;
     transform: translateX(-50%);
   }
@@ -257,8 +257,8 @@ a:hover {
   }
 
   .social-icons {
-    bottom: 370px;
-    left: 25%;
+    bottom: 150px;
+    left: 30%;
     transform: translateX(-50%);
   }
 }
