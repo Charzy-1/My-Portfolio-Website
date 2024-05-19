@@ -163,7 +163,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 60vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     right: -100%;
@@ -185,20 +185,18 @@ a:hover {
 
   .nav-bar .logo {
     padding-left: 42px;
+    font-size: 10px;
   }
 
   .banner {
     background: url("./images/mobilbackground.png") no-repeat right bottom;
     background-color: black;
+
+    /* background-size: 50% auto; */
   }
 
   .banner-content {
     max-width: 90%;
-    text-align: rish;
-  }
-
-  .container {
-    flex-direction: column;
   }
 
   .social-icons ul {
@@ -209,8 +207,8 @@ a:hover {
 
   .social-icons {
     position: absolute;
-    bottom: 30px;
-    left: 33%;
+    bottom: 300px;
+    left: 28%;
     transform: translateX(-50%);
   }
 
@@ -233,11 +231,8 @@ a:hover {
 
 @media (max-width: 375px) {
   .banner {
-    background-image: url("./images/mobilbackground.png"); /* Updated path */
-    background-repeat: no-repeat;
-    background-position: right bottom; /* Position at bottom right */
-    background-size: auto; /* Maintain image aspect ratio */
-    margin: 0 auto;
+    background-image: url("./images/mobilbackground.png");
+    background-size: 50% auto;
   }
 
   .container {
@@ -245,23 +240,25 @@ a:hover {
     margin: 0 auto;
   }
 
-  .nav-bar .logo {
-    display: none;
-  }
-
   .banner-content h1 {
     font-size: 2rem;
   }
 
   .banner-content h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .banner-content h3 {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .banner-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    bottom: 370px;
+    left: 25%;
+    transform: translateX(-50%);
   }
 }
