@@ -996,8 +996,6 @@ a:hover {
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   margin-top: 50px;
   justify-content: space-between;
-
-  /* padding: 20px; */
 }
 
 button:hover {
@@ -1009,5 +1007,5 @@ button:hover {
 }
 
 .project-box {
-  overflow: hidden; /* Prevents images from overflowing their container */
+  overflow: hidden;
 }
