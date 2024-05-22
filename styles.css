@@ -246,6 +246,14 @@ a:hover {
   .category li {
     font-size: 1.5rem;
   }
+
+  #paragraph {
+    color: black;
+    line-height: 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media (max-width: 1024px) {
@@ -255,21 +263,44 @@ a:hover {
 
   .Multi-post {
     flex: 1; /* Allow the text to take full width */
-    max-width: 390px; /* Optional: limit the maximum width */
+    max-width: 380px; /* Optional: limit the maximum width */
+  }
+
+  #paragraph {
+    font-size: 22px;
   }
 
   .workimage img {
-    width: 150%; 
-    height: 70%;
+    width: auto; 
+    height: 60%;
     display: block;
   }
 
+  .category h2 {
+    font-size: 1.5rem;
+  }
+
+  .category li {
+    font-size: 1.2rem;
+  }
+
+  .category-container li {
+    line-height: 7px;
 }
 
+.aboutme-class {
+  margin-left: 50px;
+}
+}
 @media (max-width: 912px) {
   .Multi-post {
     flex: 1;
     max-width: 300px;
+  }
+  .first-work-section {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    margin: 0 20px;
   }
   
 }
@@ -327,7 +358,6 @@ a:hover {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 20px; 
     box-sizing: border-box; 
   }
   
@@ -743,7 +773,6 @@ a:hover {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 20px; 
   box-sizing: border-box; 
 }
 
@@ -763,13 +792,6 @@ a:hover {
 
 .Multi-post h1 {
   font-size: 40px;
-}
-
-#paragraph {
-  color: black;
-  line-height: 40px;
-  font-size: 30px;
-  margin-bottom: 20px;
 }
 
 button {
@@ -808,10 +830,6 @@ button:hover {
   gap: 10px;
   margin-left: 60px;
   margin-right: 60px;
-}
-
-.grid-container .project-box img {
-  width: auto;
 }
 
 .project-box {
