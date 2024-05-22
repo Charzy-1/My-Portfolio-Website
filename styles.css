@@ -164,6 +164,12 @@ a:hover {
   .project-container {
     padding: 30px 70px 70px 70px;;
   }
+
+  .work-wrapper {
+    margin: 20px 60px;
+    padding: 70px 70px 0 70px;
+  }
+  
   
   .Multi-post {
     flex: 1;
@@ -384,7 +390,7 @@ button {
 
   .category-container li {
     padding-bottom: 40px;
-    padding-right: 20px;
+    padding-right: 0px;
 }
 
 button {
@@ -402,6 +408,48 @@ button {
     display: block;
   }
 
+  .work-section {
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 20px;
+}
+
+.work-section h1 {
+  margin-bottom: 40px;
+  font-size: 75px;
+}
+
+.work-section .line {
+    width: 100%; 
+}
+
+  .Multi-post {
+    max-width: 100%;
+  }
+
+  .work-wrapper {
+    margin: 20px 60px;
+    padding: 70px 0 0 0;
+  }
+
+  .project-container {
+    padding: 30px 0 70px 0;
+  }
+
+  .Multi-post {
+    margin-top: 270px;
+  }
+  .aboutme-class {
+    margin-left: 0px;
+  }
+
+  .category {
+    padding: 0 60px 60px 0;
+  }
+
+  .white-line {
+    padding: 0 30px 60px 0;
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -426,26 +474,25 @@ button {
   }
 
   .work-section {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box; 
-  }
-  
-  .work-section .line {
-    flex-grow: 1; 
-    height: 2px; 
-    background-color: black; 
-  }
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 20px;
+}
+
+.work-section h1 {
+  margin-bottom: 40px;
+  font-size: 75px;
+}
+
+.work-section .line {
+    width: 100%; 
+}
 
   .Multi-post {
-    flex: 1 1 100%;
-    max-width: 380px;
+    max-width: 100%;
   }
   
   .Multi-post h1 {
     margin-bottom: 20px;
-    font-size: 30px;
   }
   
   .workimage img {
@@ -453,6 +500,25 @@ button {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove bottom whitespace */
   }
+  
+  .category {
+    padding: 0 40px 60px 0px;
+  }
+
+  .work-wrapper {
+    margin: 20px 60px;
+    padding: 70px 0 0 0;
+  }
+
+  .project-container {
+    padding: 30px 0 70px 0;
+  }
+
+  .Multi-post {
+    margin-top: 250px;
+  }
+  
+
 
 }
 
@@ -846,10 +912,5 @@ button:hover {
   width: 100%;
   height: auto; 
   display: block; 
-}
-
-.work-wrapper {
-  margin: 20px 60px;
-  padding: 70px 70px 0 70px;;
 }
 
