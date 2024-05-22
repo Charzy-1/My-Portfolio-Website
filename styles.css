@@ -169,6 +169,9 @@ a:hover {
     flex: 1;
     max-width: 500px;
   }
+  .Multi-post h1 {
+    font-size: 40px;
+  }
 
   .workimage img {
     width: 150%; 
@@ -254,6 +257,40 @@ a:hover {
     margin-bottom: 20px;
   }
   
+  .project-container .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
+    gap: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  button {
+    background-color: rgb(216, 77, 13);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: rgb(156, 57, 11);
+  }
+  
+  .multipost-skill {
+    margin: 20px 15px 30px 0;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 2px;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -267,7 +304,7 @@ a:hover {
   }
 
   #paragraph {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .workimage img {
@@ -298,6 +335,10 @@ a:hover {
     margin-top: 250px;
   }
 
+  .Multi-post h1{
+    font-size: 50px;
+    }
+
   .first-work-section {
     flex-direction: column;
    } 
@@ -316,13 +357,20 @@ a:hover {
     padding-bottom: 40px;
     padding-right: 30px;
 }
+#paragraph {
+  font-size: 30px;
+}
 
+button {
+  font-size: 35px;
+}
 }
 
 @media (max-width: 853px) {
   .Multi-post {
     flex: 1;
-    max-width: 450px;
+    max-width: 100%;
+    margin-top: 200px;
   }
 
   .workimage img {
@@ -330,14 +378,23 @@ a:hover {
     height: auto;
     display: block;
   }
+  .project-container .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+
+  .category-container li {
+    padding-bottom: 40px;
+    padding-right: 20px;
+}
+
+button {
+  font-size: 30px;
+}
+
 
 }
 
 @media (max-width: 820px) {
-  .Multi-post {
-    flex: 1;
-    max-width: 400px;
-  }
 
   .workimage img {
     width: 100%; 
@@ -395,36 +452,6 @@ a:hover {
     width: 100%; /* Make the image take up the full width of its container */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove bottom whitespace */
-  }
-  
-  button {
-    background-color: rgb(216, 77, 13);
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background-color: rgb(156, 57, 11);
-  }
-  
-  .multipost-skill {
-    margin: 20px 15px 30px 0;
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    border-radius: 2px;
-  }
-
-  .project-container .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
   }
 
 }
@@ -710,7 +737,6 @@ a:hover {
 }
 
 .Multi-post h1 {
-    /* font-size: 2em; Adjust font size */
     margin-bottom: 0;
 }
 
@@ -804,46 +830,12 @@ a:hover {
   /* padding: 20px; */
 }
 
-.Multi-post h1 {
-  font-size: 40px;
-}
-
-button {
-  background-color: rgb(216, 77, 13);
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  font-weight: bold;
-}
-
 button:hover {
   background-color: rgb(156, 57, 11);
 }
 
-.multipost-skill {
-  margin: 20px 15px 30px 0;
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-  border-radius: 2px;
-}
-
 .project-container {
   padding-bottom: 50px;;
-}
-
-.project-container .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
-  gap: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
 }
 
 .project-box {
