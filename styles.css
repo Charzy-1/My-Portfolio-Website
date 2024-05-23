@@ -179,7 +179,7 @@ a:hover {
 
   .Multi-post {
     flex: 1;
-    max-width: 650px;
+    max-width: 500px;
   }
 
   .Multi-post h1 {
@@ -187,8 +187,8 @@ a:hover {
   }
 
   .workimage img {
-    width: 150%;
-    height: auto;
+    width: auto;
+    height: 100%;
     display: block;
   }
 
@@ -286,7 +286,7 @@ a:hover {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -306,17 +306,12 @@ a:hover {
 }
 
 @media (max-width: 1280px) {
-  .Multi-post {
-    max-width: 500px;
+  .workimage img {
+    width: 150%;
+    height: auto;
   }
-
-  .aboutme-class h1 {
-    font-size: 4rem;
-    margin-bottom: 30px;
-  }
-
 }
-  
+
 @media (max-width: 1024px) {
   .banner {
     background-size: 50% auto;
@@ -324,16 +319,24 @@ a:hover {
 
   .Multi-post {
     flex: 1; /* Allow the text to take full width */
-    max-width: 380px; /* Optional: limit the maximum width */
+    max-width: 340px; /* Optional: limit the maximum width */
+  }
+
+  .Multi-post h1 {
+    font-size: 30px;
   }
 
   #paragraph {
+    font-size: 22px;
+  }
+
+  button {
     font-size: 19px;
   }
 
   .workimage img {
-    width: auto;
-    height: 60%;
+    width: 120%;
+    height: 70%;
     display: block;
   }
 
@@ -351,6 +354,10 @@ a:hover {
 
   .aboutme-class {
     margin-left: 50px;
+  }
+
+  .aboutme-class h1 {
+    font-size: 4rem;
   }
 }
 
@@ -642,7 +649,6 @@ a:hover {
 @media (max-width: 547px) {
   .social-icons {
     left: 20%;
-    /* bottom: 170%; */
   }
 
   .work-wrapper {
@@ -842,7 +848,7 @@ a:hover {
     margin-top: 20px;
   }
 
-  .work-section .line {
+  s .work-section .line {
     width: 100%;
   }
 
@@ -899,61 +905,10 @@ a:hover {
   }
 }
 
-@media (max-width: 344px) {
-  .social-icons {
-    bottom: 29%;
-  }
-
-  .Multi-post h1 {
-    font-size: 31px;
-  }
-}
-
-.work-section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.work-section .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: black;
-}
-
-.first-work-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 50px;
-  justify-content: space-between;
-}
-
-button:hover {
-  background-color: rgb(156, 57, 11);
-}
-
-.project-container {
-  padding-bottom: 50px;
-}
-
-.project-box {
-  overflow: hidden;
-}
-
 @media (max-width: 320px) {
   .social-icons {
     left: 31%;
   }
-
-  .Multi-post h1 {
-    font-size: 29px;
-}
-
-.aboutme-class h1 {
-  font-size: 3rem;
-}
-
 }
 
 @media (max-width: 278px) {
@@ -1030,4 +985,46 @@ button:hover {
     color: var(--text-color);
     font-size: 0.3rem;
   }
+}
+
+@media (max-width: 344px) {
+  .social-icons {
+    bottom: 29%;
+  }
+
+  .Multi-post h1 {
+    font-size: 31px;
+  }
+}
+
+.work-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.work-section .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+}
+
+.first-work-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: rgb(156, 57, 11);
+}
+
+.project-container {
+  padding-bottom: 50px;
+}
+
+.project-box {
+  overflow: hidden;
 }
