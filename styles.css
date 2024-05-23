@@ -167,7 +167,7 @@ a:hover {
   display: block;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
   .project-container {
     padding: 30px 70px 70px 70px;
   }
@@ -179,7 +179,7 @@ a:hover {
 
   .Multi-post {
     flex: 1;
-    max-width: 500px;
+    max-width: 650px;
   }
 
   .Multi-post h1 {
@@ -209,12 +209,12 @@ a:hover {
 
   .aboutme-class h1 {
     color: rgb(216, 77, 13);
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 30px;
   }
 
   .aboutme-class p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 40px;
   }
 
@@ -286,7 +286,7 @@ a:hover {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -305,6 +305,18 @@ a:hover {
   }
 }
 
+@media (max-width: 1280px) {
+  .Multi-post {
+    max-width: 500px;
+  }
+
+  .aboutme-class h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+}
+  
 @media (max-width: 1024px) {
   .banner {
     background-size: 50% auto;
@@ -630,6 +642,7 @@ a:hover {
 @media (max-width: 547px) {
   .social-icons {
     left: 20%;
+    /* bottom: 170%; */
   }
 
   .work-wrapper {
@@ -886,10 +899,61 @@ a:hover {
   }
 }
 
+@media (max-width: 344px) {
+  .social-icons {
+    bottom: 29%;
+  }
+
+  .Multi-post h1 {
+    font-size: 31px;
+  }
+}
+
+.work-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.work-section .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+}
+
+.first-work-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: rgb(156, 57, 11);
+}
+
+.project-container {
+  padding-bottom: 50px;
+}
+
+.project-box {
+  overflow: hidden;
+}
+
 @media (max-width: 320px) {
   .social-icons {
     left: 31%;
   }
+
+  .Multi-post h1 {
+    font-size: 29px;
+}
+
+.aboutme-class h1 {
+  font-size: 3rem;
+}
+
 }
 
 @media (max-width: 278px) {
@@ -966,46 +1030,4 @@ a:hover {
     color: var(--text-color);
     font-size: 0.3rem;
   }
-}
-
-@media (max-width: 344px) {
-  .social-icons {
-    bottom: 29%;
-  }
-
-  .Multi-post h1 {
-    font-size: 31px;
-  }
-}
-
-.work-section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.work-section .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: black;
-}
-
-.first-work-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 50px;
-  justify-content: space-between;
-}
-
-button:hover {
-  background-color: rgb(156, 57, 11);
-}
-
-.project-container {
-  padding-bottom: 50px;
-}
-
-.project-box {
-  overflow: hidden;
 }
