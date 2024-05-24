@@ -172,6 +172,23 @@ a:hover {
     padding: 30px 70px 70px 70px;
   }
 
+  .work-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Optional: Add some margin-bottom to the entire section if needed */
+  }
+
+  .work-section h1 {
+    margin-right: 20px; /* Add space between the h1 and the line */
+  }
+
+  .work-section .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    max-width: 80%;
+  }
+
   .work-wrapper {
     margin: 20px 60px;
     padding: 70px 70px 0 70px;
@@ -302,6 +319,47 @@ a:hover {
     border: 1px solid black;
     color: black;
     border-radius: 2px;
+  }
+
+  /* Style for each project box */
+  .project-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Style for the images */
+  .project-box img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Style for the hover effect rectangle */
+  .hover-effect {
+    position: absolute;
+    bottom: 0; /* Changed to bottom: 0; for positioning at the bottom */
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(100%); /* Initially hidden below the image */
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Style for the hover effect on hover */
+  .project-box:hover .hover-effect {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Add a smooth transition to the hover effect */
+  .project-effect a { /* Typo fixed: project-effect should be project-box */
+    text-decoration: none;
+    color: white; /* Adjust text color for better visibility over image */
   }
 }
 
@@ -833,6 +891,10 @@ a:hover {
   }
 
   .Multi-post h1 {
+    font-size: 36px;
+  }
+
+  .work-section h1 {
     font-size: 36px;
   }
 }
