@@ -343,11 +343,12 @@ a:hover {
     color: white;
     text-align: center;
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     opacity: 0;
     transform: translateY(100%); /* Initially hidden below the image */
     transition: all 0.3s ease-in-out;
+    pointer-events: none;
   }
 
   /* Style for the hover effect on hover */
@@ -365,8 +366,32 @@ a:hover {
 
 @media (max-width: 1280px) {
   .workimage img {
-    width: 150%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+
+  .project-container {
+    padding: 30px 0 0 0;
+  }
+
+  .work-wrapper {
+    margin: 20px 60px;
+    padding: 70px 0 0 0;
+  }
+
+  .Multi-post {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .aboutme-class {
+    margin-left: 0;
+  }
+
+  .white-line,
+  .category {
+    padding: 0;
   }
 }
 
@@ -386,6 +411,8 @@ a:hover {
 
   #paragraph {
     font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 0;
   }
 
   button {
@@ -393,8 +420,8 @@ a:hover {
   }
 
   .workimage img {
-    width: 120%;
-    height: 70%;
+    width: auto;
+    height: 100%;
     display: block;
   }
 
@@ -417,12 +444,20 @@ a:hover {
   .aboutme-class h1 {
     font-size: 4rem;
   }
+
+  .Aboutme-banner {
+    padding: 20px 0 0 0;
+  }
 }
 
 @media (max-width: 912px) {
+  .project-container .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+
   .Multi-post {
     max-width: 100%;
-    margin-top: 250px;
+    margin-top: 350px;
   }
 
   .Multi-post h1 {
@@ -449,7 +484,8 @@ a:hover {
   }
 
   #paragraph {
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 40px;
   }
 
   button {
@@ -461,17 +497,13 @@ a:hover {
   .Multi-post {
     flex: 1;
     max-width: 100%;
-    margin-top: 200px;
+    margin-top: 300px;
   }
 
   .workimage img {
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  .project-container .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
   }
 
   .category-container li {
@@ -521,6 +553,7 @@ a:hover {
 
   .aboutme-class {
     margin-left: 0;
+    padding-left: 60px;
   }
 
   .category {
@@ -725,6 +758,10 @@ a:hover {
     font-size: 50px;
   }
 
+  .aboutme-class {
+    padding-left: 0;
+  }
+
   .aboutme-class h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -770,6 +807,10 @@ a:hover {
 
   .category li {
     padding: 0 0 40px 0;
+  }
+
+  #paragraph {
+    line-height: 40px;
   }
 }
 
@@ -863,6 +904,11 @@ a:hover {
 
   .white-line {
     padding: 30px 30px 60px 0;
+  }
+
+  .hover-effect {
+    opacity: 1; /* Always visible */
+    transform: translateY(0); /* No transition needed */
   }
 }
 
