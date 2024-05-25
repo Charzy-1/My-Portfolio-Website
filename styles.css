@@ -168,7 +168,6 @@ a:hover {
     padding: 30px 70px 70px 70px;
   }
 
-
   .work-section {
     display: flex;
     align-items: center;
@@ -407,7 +406,6 @@ a:hover {
   .skill-button:hover {
     background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
   }
-
 }
 
 @media (max-width: 1280px) {
@@ -858,7 +856,7 @@ a:hover {
   #paragraph {
     line-height: 40px;
   }
-  
+
   .project-content h1 {
     padding-bottom: 20px;
     padding-top: 80px;
@@ -880,7 +878,6 @@ a:hover {
     border: none;
     color: rgb(250, 244, 244); /* Button text color */
     padding: 5px 5px; /* Adjust padding as needed */
-
     transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
     margin: 0 2px; /* Add margin between buttons */
