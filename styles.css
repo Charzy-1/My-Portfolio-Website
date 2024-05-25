@@ -60,8 +60,6 @@ a:hover {
   position: absolute;
   font-size: 1.5rem;
   display: none;
-
-  /* z-index: 100; */
 }
 
 .openmenu {
@@ -73,8 +71,6 @@ a:hover {
 .closemenu {
   top: 20px;
   right: 20px;
-
-  /* z-index: 101;/ */
 }
 
 #check { display: none; }
@@ -373,14 +369,42 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text horizontally */
+    text-align: left; /* Center text horizontally */
     opacity: 1; /* Initially visible */
     transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+  }
+
+  .project-content h1 {
+    padding-bottom: 20px;
+    padding-top: 80px;
   }
 
   .project-box:hover .project-content {
     opacity: 0; /* Disappear on hover */
+  }
+
+  .button-container {
+    display: flex; /* Buttons displayed horizontally */
+    margin-top: 10px; /* Add some space between buttons and content */
+    padding-top: 30px;
+  }
+
+  /* Style for the buttons */
+  .skill-button {
+    background-color: rgba(180, 159, 159, 0.8); /* Transparent white background */
+    border: none;
+    color: rgb(250, 244, 244); /* Button text color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    cursor: pointer; /* Indicate clickable button */
+    font-size: 15px;
+    transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    margin: 0 5px; /* Add margin between buttons */
+  }
+
+  .skill-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
   }
 }
 
@@ -771,7 +795,7 @@ a:hover {
   }
 
   .project-container .grid-container {
-    margin: 0 40px 0 40px;
+    margin: 0 25px 0 25px;
   }
 
   .work-section h1 {
@@ -896,7 +920,7 @@ a:hover {
   }
 
   .project-container .grid-container {
-    margin: 0 20px 0;
+    /* margin: 0 20px 0; */
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -1155,4 +1179,6 @@ button:hover {
 
 .project-box {
   overflow: hidden;
+  height: 393px;
+  max-width: 100%;
 }
