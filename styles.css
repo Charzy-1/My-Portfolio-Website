@@ -962,6 +962,7 @@ textarea::placeholder {
 @media (max-width: 547px) {
   .social-icons {
     left: 20%;
+    bottom: 25%;
   }
 
   .work-wrapper {
@@ -1099,7 +1100,7 @@ textarea::placeholder {
 
 @media (max-width: 430px) {
   .social-icons {
-    bottom: 32%;
+    bottom: 35%;
   }
 
   .work-wrapper {
@@ -1163,6 +1164,7 @@ textarea::placeholder {
 @media (max-width: 412px) {
   .social-icons {
     left: 22%;
+    bottom: 32%;
   }
 
   .banner-content p {
@@ -1181,7 +1183,7 @@ textarea::placeholder {
 
 @media (max-width: 390px) {
   .social-icons {
-    bottom: 30%;
+    bottom: 28%;
   }
 
   .Multi-post h1 {
@@ -1195,7 +1197,7 @@ textarea::placeholder {
 
 @media (max-width: 375px) {
   .social-icons {
-    bottom: 24%;
+    bottom: 21%;
   }
 
   .work-section {
@@ -1249,7 +1251,7 @@ textarea::placeholder {
 @media (max-width: 360px) {
   .social-icons {
     left: 25%;
-    bottom: 140px;
+    bottom: 24%;
   }
 
   .aboutme-class h1 {
