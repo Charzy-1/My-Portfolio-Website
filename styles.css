@@ -224,12 +224,10 @@ input[type="text"]:last-child {
   width: 48%;
 }
 
-/* Same styles from previous response */
-
 /* Modifications for message box */
 textarea {
   width: 100%;
-  padding: 10px 50px 60px 0;
+  padding: 10px 50px 60px 10px;
   border: 1px solid #ccc;
   border-radius: 0;
   font-size: 1.5em;
@@ -248,19 +246,19 @@ textarea::placeholder {
 }
 
 textarea::-webkit-input-placeholder {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: black;
   font-weight: bold;
 }
 
 textarea::-moz-placeholder {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: black;
   font-weight: bold;
 }
 
 textarea:-ms-input-placeholder {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: black;
   font-weight: bold;
 }
