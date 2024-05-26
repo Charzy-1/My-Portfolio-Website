@@ -86,6 +86,10 @@ a:hover {
   background-color: black;
 }
 
+p {
+  padding-right: 30px;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -110,6 +114,12 @@ a:hover {
 .banner-content h1 {
   color: var(--accent-color);
   font-size: 4rem;
+}
+
+.workimage img {
+  width: 200%;
+  height: 100%;
+  display: block;
 }
 
 .banner-content h2 {
@@ -151,9 +161,9 @@ a:hover {
   padding: 0;
 }
 
+/* Style for the images */
 .project-box img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -171,26 +181,24 @@ a:hover {
 .contact-section {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 20px 0;
   background-color: #fff;
   max-width: 100%;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 100px 90px;
+  padding: 100px 60px;
 }
 
 .contact-section p {
   font-size: 2.5em;
   margin: 0;
-  flex: 0 0 35%;;
+  flex: 0 0 35%;
   font-weight: bold;
-
 }
 
 form {
   display: flex;
   flex-direction: column;
-  flex: 0 0 65%;;
+  flex: 0 0 65%;
 }
 
 .form-group {
@@ -231,14 +239,13 @@ textarea {
   resize: vertical;
   margin: 20px 0 30px 0;
   color: black;
-
 }
 
 textarea::placeholder {
   font-size: 1.4em; /* Adjust the font size as needed */
+
   /* color: black; */
 }
-
 
 textarea::-webkit-input-placeholder {
   font-size: 1.5em;
@@ -266,26 +273,27 @@ textarea:-moz-placeholder {
 
 .text-content p {
   flex: 1; /* Allow paragraph to grow and fill remaining space */
-  margin: 0 20px 0 0; 
-}
-
-p {
-  padding-right: 30px;
+  margin: 0 20px 0 0;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: orange;
-  color: white;
+  background-color: rgb(216, 77, 13);
   border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
   align-self: flex-start;
-  margin-top: 10px;
+  width: auto;
 }
 
 button:hover {
-  background-color: darkorange;
+  background-color: rgb(156, 57, 11);
 }
 
 input:invalid,
@@ -309,275 +317,242 @@ textarea::placeholder {
 }
 
 .footer {
-width: 100%;
-/* position: fixed; */
-bottom: 0;
-text-align: center;
-padding: 10px 0;
-margin-top: 90px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+.category li {
+  font-size: 1.5rem;
+}
+
+.category-container li {
+  list-style: none;
+  line-height: 10px;
+  padding: 0 60px 60px 60px;
 }
 
 .svg-container ul {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .svg-container ul li {
-margin: 0;
+  margin: 0;
 }
 
 .svg-container ul li img {
-width: 30px; /* Set your desired icon size */
-height: auto;
-vertical-align: middle;
+  width: 30px; /* Set your desired icon size */
+  height: auto;
+  vertical-align: middle;
 }
 
-  .project-container {
-    padding: 30px 70px 70px 70px;
-  }
+.project-container {
+  padding: 30px 70px 70px 70px;
+}
 
-  .work-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Optional: Add some margin-bottom to the entire section if needed */
-  }
+.work-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Optional: Add some margin-bottom to the entire section if needed */
+  width: 100%;
+  box-sizing: border-box;
+}
 
-  .work-section h1 {
-    margin-right: 20px; /* Add space between the h1 and the line */
-  }
+.work-section h1 {
+  margin-right: 20px; /* Add space between the h1 and the line */
+}
 
-  .work-section .line {
-    flex-grow: 1;
-    height: 2px;
-    background-color: black;
-    max-width: 80%;
-  }
+.work-section .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+  max-width: 80%;
+}
 
-  .work-wrapper {
-    margin: 20px 60px;
-    padding: 70px 70px 0 70px;
-  }
+.work-wrapper {
+  margin: 20px 60px;
+  padding: 70px 70px 0 70px;
+}
 
-  .Multi-post {
-    flex: 1;
-    max-width: 500px;
-  }
+.Multi-post {
+  flex: 1;
+  max-width: 500px;
+}
 
-  .Multi-post h1 {
-    font-size: 40px;
-  }
+.Multi-post h1 {
+  font-size: 40px;
+}
 
-  .workimage img {
-    width: 200%;
-    height: 100%;
-    display: block;
-  }
+.Aboutme-banner {
+  background: url(./images/Frame.png) no-repeat right;
+  background-color: black;
+  background-size: 40% auto;
+  padding: 70px;
+  color: white;
+  min-height: 300px; /* Ensure there's enough height to see the background image */
+}
 
-  .Aboutme-banner {
-    background: url(./images/Frame.png) no-repeat right;
-    background-color: black;
-    background-size: 40% auto;
-    padding: 70px;
-    color: white;
-    min-height: 300px; /* Ensure there's enough height to see the background image */
-  }
+.aboutme-class {
+  max-width: 50%;
+  padding-bottom: 30px;
+  margin-left: 70px;
+}
 
-  .aboutme-class {
-    max-width: 50%;
-    padding-bottom: 30px;
-    margin-left: 70px;
-  }
+.aboutme-class h1 {
+  color: rgb(216, 77, 13);
+  font-size: 6rem;
+  margin-bottom: 30px;
+}
 
-  .aboutme-class h1 {
-    color: rgb(216, 77, 13);
-    font-size: 6rem;
-    margin-bottom: 30px;
-  }
+.aboutme-class p {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
 
-  .aboutme-class p {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
+.white-line {
+  background-color: black;
+  height: 100px;
+  width: 100%;
+  padding: 0 60px 60px 60px;
+}
 
-  .white-line {
-    background-color: black;
-    height: 100px;
-    width: 100%;
-    padding: 0 60px 60px 60px;
-  }
+.white-line .line2 {
+  height: 2px;
+  background-color: white;
+  margin: 0 60px 0 60px;
+}
 
-  .white-line .line2 {
-    height: 2px;
-    background-color: white;
-    margin: 0 60px 0 60px;
-  }
+.category {
+  background-color: black;
+  height: auto;
+  width: 100%;
+  padding: 0 60px 60px 60px;
+  color: white;
+}
 
-  .category {
-    background-color: black;
-    height: auto;
-    width: 100%;
-    padding: 0 60px 60px 60px;
-    color: white;
-  }
+.category-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .category-container {
-    display: flex;
-    justify-content: space-between;
-  }
+.fa-solid {
+  color: var(--accent-color);
+  padding: 0 10px 0 0;
+}
 
-  .category-container li {
-    list-style: none;
-    line-height: 10px;
-    padding: 0 60px 60px 60px;
-  }
+.category h2 {
+  font-size: 2rem;
+}
 
-  .fa-solid {
-    color: var(--accent-color);
-    padding: 0 10px 0 0;
-  }
+#paragraph {
+  color: black;
+  line-height: 40px;
+  font-size: 30px;
+}
 
-  .category h2 {
-    font-size: 2rem;
-  }
+.project-container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
+  gap: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
 
-  .category li {
-    font-size: 1.5rem;
-  }
+.multipost-skill {
+  margin: 10px 15px 10px 0;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+}
 
-  #paragraph {
-    color: black;
-    line-height: 40px;
-    font-size: 30px;
-  }
+/* Style for each project box */
+.project-box {
+  position: relative;
+  overflow: hidden;
+  height: 393px;
+  max-width: 100%;
+}
 
-  .project-container .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
-    gap: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
-  }
+/* Style for the hover effect rectangle */
+.hover-effect {
+  position: absolute;
+  bottom: 0; /* Changed to bottom: 0; for positioning at the bottom */
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%); /* Initially hidden below the image */
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
 
-  button {
-    background-color: rgb(216, 77, 13);
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: bold;
-  }
+/* Style for the hover effect on hover */
+.project-box:hover .hover-effect {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  button:hover {
-    background-color: rgb(156, 57, 11);
-  }
+.project-content {
+  position: absolute; /* Already positioned on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color for h1 and p */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* Center text horizontally */
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+}
 
-  .multipost-skill {
-    margin: 10px 15px 10px 0;
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    border-radius: 2px;
-  }
+.project-content h1 {
+  padding-bottom: 20px;
+  padding-top: 80px;
+}
 
-  /* Style for each project box */
-  .project-box {
-    position: relative;
-    overflow: hidden;
-  }
+.project-box:hover .project-content {
+  opacity: 0; /* Disappear on hover */
+}
 
-  /* Style for the images */
-  .project-box img {
-    width: 100%;
-    display: block;
-  }
+.button-container {
+  display: flex; /* Buttons displayed horizontally */
+  margin-top: 10px; /* Add some space between buttons and content */
+  padding-top: 30px;
+}
 
-  /* Style for the hover effect rectangle */
-  .hover-effect {
-    position: absolute;
-    bottom: 0; /* Changed to bottom: 0; for positioning at the bottom */
-    left: 0;
-    width: 100%;
-    background-color: var(--accent-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(100%); /* Initially hidden below the image */
-    transition: all 0.3s ease-in-out;
-    pointer-events: none;
-  }
+/* Style for the buttons */
+.skill-button {
+  background-color: rgba(180, 159, 159, 0.8); /* Transparent white background */
+  border: none;
+  color: rgb(250, 244, 244); /* Button text color */
+  padding: 5px 10px; /* Adjust padding as needed */
+  cursor: pointer; /* Indicate clickable button */
+  font-size: 15px;
+  transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  margin: 0 5px; /* Add margin between buttons */
+}
 
-  /* Style for the hover effect on hover */
-  .project-box:hover .hover-effect {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Add a smooth transition to the hover effect */
-  .project-effect a { /* Typo fixed: project-effect should be project-box */
-    text-decoration: none;
-    color: white; /* Adjust text color for better visibility over image */
-  }
-
-  .project-content {
-    position: absolute; /* Already positioned on top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white; /* Text color for h1 and p */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left; /* Center text horizontally */
-    opacity: 1; /* Initially visible */
-    transition: opacity 0.3s ease-in-out;
-    padding: 20px;
-  }
-
-  .project-content h1 {
-    padding-bottom: 20px;
-    padding-top: 80px;
-  }
-
-  .project-box:hover .project-content {
-    opacity: 0; /* Disappear on hover */
-  }
-
-  .button-container {
-    display: flex; /* Buttons displayed horizontally */
-    margin-top: 10px; /* Add some space between buttons and content */
-    padding-top: 30px;
-  }
-
-  /* Style for the buttons */
-  .skill-button {
-    background-color: rgba(180, 159, 159, 0.8); /* Transparent white background */
-    border: none;
-    color: rgb(250, 244, 244); /* Button text color */
-    padding: 5px 10px; /* Adjust padding as needed */
-    cursor: pointer; /* Indicate clickable button */
-    font-size: 15px;
-    transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    margin: 0 5px; /* Add margin between buttons */
-  }
-
-  .skill-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
-  }
-
+.skill-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
+}
 
 @media (max-width: 1280px) {
   .workimage img {
@@ -587,7 +562,7 @@ vertical-align: middle;
   }
 
   .project-container {
-    padding: 30px 0 0 0;
+    padding: 30px 0 30px 0;
   }
 
   .work-wrapper {
@@ -855,21 +830,21 @@ vertical-align: middle;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-}
+  }
 
-.contact-section p {
+  .contact-section p {
     margin-bottom: 20px;
     text-align: center;
     padding-right: 0; /* Remove right padding */
-}
+  }
 
-form {
+  form {
     width: 100%; /* Make the form take full width */
-}
+  }
 
-button {
-  align-self: center; /* Center the button */
-}
+  button {
+    align-self: center; /* Center the button */
+  }
 }
 
 @media (max-width: 600px) {
@@ -897,6 +872,12 @@ button {
 
   .menu li.email-icon {
     display: none;
+  }
+
+  /* Add a smooth transition to the hover effect */
+  .project-effect a { /* Typo fixed: project-effect should be project-box */
+    text-decoration: none;
+    color: white; /* Adjust text color for better visibility over image */
   }
 
   .menu li a {
@@ -1374,36 +1355,9 @@ button {
   }
 }
 
-.work-section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.work-section .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: black;
-}
-
 .first-work-section {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   margin-top: 50px;
   justify-content: space-between;
-}
-
-button:hover {
-  background-color: rgb(156, 57, 11);
-}
-
-.project-container {
-  padding-bottom: 50px;
-}
-
-.project-box {
-  overflow: hidden;
-  height: 393px;
-  max-width: 100%;
 }
