@@ -86,6 +86,10 @@ a:hover {
   background-color: black;
 }
 
+p {
+  padding-right: 30px;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -110,6 +114,12 @@ a:hover {
 .banner-content h1 {
   color: var(--accent-color);
   font-size: 4rem;
+}
+
+.workimage img {
+  width: 200%;
+  height: 100%;
+  display: block;
 }
 
 .banner-content h2 {
@@ -151,9 +161,9 @@ a:hover {
   padding: 0;
 }
 
+/* Style for the images */
 .project-box img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -163,249 +173,383 @@ a:hover {
   display: block;
 }
 
-@media (max-width: 1440px) {
-  .project-container {
-    padding: 30px 70px 70px 70px;
-  }
+.contact-form {
+  height: auto;
+  width: 100%;
+}
 
-  .work-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Optional: Add some margin-bottom to the entire section if needed */
-  }
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 100px 60px;
+}
 
-  .work-section h1 {
-    margin-right: 20px; /* Add space between the h1 and the line */
-  }
+.contact-section p {
+  font-size: 2.5em;
+  margin: 0;
+  flex: 0 0 35%;
+  font-weight: bold;
+}
 
-  .work-section .line {
-    flex-grow: 1;
-    height: 2px;
-    background-color: black;
-    max-width: 80%;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 65%;
+}
 
-  .work-wrapper {
-    margin: 20px 60px;
-    padding: 70px 70px 0 70px;
-  }
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-  .Multi-post {
-    flex: 1;
-    max-width: 500px;
-  }
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  box-sizing: border-box;
+  outline: none;
+}
 
-  .Multi-post h1 {
-    font-size: 40px;
-  }
+input[type="text"]:first-child,
+input[type="text"]:last-child {
+  width: 48%;
+}
 
-  .workimage img {
-    width: 200%;
-    height: 100%;
-    display: block;
-  }
+/* Modifications for message box */
+textarea {
+  width: 100%;
+  padding: 10px 50px 60px 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 1.5em;
+  background-color: rgb(233, 229, 229);
+  box-sizing: border-box;
+  outline: none;
+  resize: vertical;
+  margin: 20px 0 30px 0;
+  color: black;
+}
 
-  .Aboutme-banner {
-    background: url(./images/Frame.png) no-repeat right;
-    background-color: black;
-    background-size: 40% auto;
-    padding: 70px;
-    color: white;
-    min-height: 300px; /* Ensure there's enough height to see the background image */
-  }
+textarea::placeholder {
+  font-size: 1.4em; /* Adjust the font size as needed */
 
-  .aboutme-class {
-    max-width: 50%;
-    padding-bottom: 30px;
-    margin-left: 70px;
-  }
+  /* color: black; */
+}
 
-  .aboutme-class h1 {
-    color: rgb(216, 77, 13);
-    font-size: 6rem;
-    margin-bottom: 30px;
-  }
+textarea::-webkit-input-placeholder {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
 
-  .aboutme-class p {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
+textarea::-moz-placeholder {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
 
-  .white-line {
-    background-color: black;
-    height: 100px;
-    width: 100%;
-    padding: 0 60px 60px 60px;
-  }
+textarea:-ms-input-placeholder {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
 
-  .white-line .line2 {
-    height: 2px;
-    background-color: white;
-    margin: 0 60px 0 60px;
-  }
+textarea:-moz-placeholder {
+  font-size: 1.5em;
+  color: black;
+  font-weight: bold;
+}
 
-  .category {
-    background-color: black;
-    height: auto;
-    width: 100%;
-    padding: 0 60px 60px 60px;
-    color: white;
-  }
+.text-content p {
+  flex: 1; /* Allow paragraph to grow and fill remaining space */
+  margin: 0 20px 0 0;
+}
 
-  .category-container {
-    display: flex;
-    justify-content: space-between;
-  }
+button {
+  background-color: rgb(216, 77, 13);
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+  align-self: flex-start;
+  width: auto;
+}
 
-  .category-container li {
-    list-style: none;
-    line-height: 10px;
-    padding: 0 60px 60px 60px;
-  }
+button:hover {
+  background-color: rgb(156, 57, 11);
+}
 
-  .fa-solid {
-    color: var(--accent-color);
-    padding: 0 10px 0 0;
-  }
+input:invalid,
+textarea:invalid {
+  border-color: rgb(196, 176, 176);
+}
 
-  .category h2 {
-    font-size: 2rem;
-  }
+input:valid,
+textarea:valid {
+  border-color: green;
+}
 
-  .category li {
-    font-size: 1.5rem;
-  }
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
 
-  #paragraph {
-    color: black;
-    line-height: 40px;
-    font-size: 30px;
-  }
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
 
-  .project-container .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
-    gap: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
-  }
+.footer {
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
 
-  button {
-    background-color: rgb(216, 77, 13);
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: bold;
-  }
+.category li {
+  font-size: 1.5rem;
+}
 
-  button:hover {
-    background-color: rgb(156, 57, 11);
-  }
+.category-container li {
+  list-style: none;
+  line-height: 10px;
+  padding: 0 60px 60px 60px;
+}
 
-  .multipost-skill {
-    margin: 10px 15px 10px 0;
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    border-radius: 2px;
-  }
+.svg-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 
-  /* Style for each project box */
-  .project-box {
-    position: relative;
-    overflow: hidden;
-  }
+.svg-container ul li {
+  margin: 0;
+}
 
-  /* Style for the images */
-  .project-box img {
-    width: 100%;
-    display: block;
-  }
+.svg-container ul li img {
+  width: 30px; /* Set your desired icon size */
+  height: auto;
+  vertical-align: middle;
+}
 
-  /* Style for the hover effect rectangle */
-  .hover-effect {
-    position: absolute;
-    bottom: 0; /* Changed to bottom: 0; for positioning at the bottom */
-    left: 0;
-    width: 100%;
-    background-color: var(--accent-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(100%); /* Initially hidden below the image */
-    transition: all 0.3s ease-in-out;
-    pointer-events: none;
-  }
+.project-container {
+  padding: 30px 70px 70px 70px;
+}
 
-  /* Style for the hover effect on hover */
-  .project-box:hover .hover-effect {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.work-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Optional: Add some margin-bottom to the entire section if needed */
+  width: 100%;
+  box-sizing: border-box;
+}
 
-  /* Add a smooth transition to the hover effect */
-  .project-effect a { /* Typo fixed: project-effect should be project-box */
-    text-decoration: none;
-    color: white; /* Adjust text color for better visibility over image */
-  }
+.work-section h1 {
+  margin-right: 20px; /* Add space between the h1 and the line */
+}
 
-  .project-content {
-    position: absolute; /* Already positioned on top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white; /* Text color for h1 and p */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left; /* Center text horizontally */
-    opacity: 1; /* Initially visible */
-    transition: opacity 0.3s ease-in-out;
-    padding: 20px;
-  }
+.work-section .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+  max-width: 80%;
+}
 
-  .project-content h1 {
-    padding-bottom: 20px;
-    padding-top: 80px;
-  }
+.work-wrapper {
+  margin: 20px 60px;
+  padding: 70px 70px 0 70px;
+}
 
-  .project-box:hover .project-content {
-    opacity: 0; /* Disappear on hover */
-  }
+.Multi-post {
+  flex: 1;
+  max-width: 500px;
+}
 
-  .button-container {
-    display: flex; /* Buttons displayed horizontally */
-    margin-top: 10px; /* Add some space between buttons and content */
-    padding-top: 30px;
-  }
+.Multi-post h1 {
+  font-size: 40px;
+}
 
-  /* Style for the buttons */
-  .skill-button {
-    background-color: rgba(180, 159, 159, 0.8); /* Transparent white background */
-    border: none;
-    color: rgb(250, 244, 244); /* Button text color */
-    padding: 5px 10px; /* Adjust padding as needed */
-    cursor: pointer; /* Indicate clickable button */
-    font-size: 15px;
-    transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    margin: 0 5px; /* Add margin between buttons */
-  }
+.Aboutme-banner {
+  background: url(./images/Frame.png) no-repeat right;
+  background-color: black;
+  background-size: 40% auto;
+  padding: 70px;
+  color: white;
+  min-height: 300px; /* Ensure there's enough height to see the background image */
+}
 
-  .skill-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
-  }
+.aboutme-class {
+  max-width: 50%;
+  padding-bottom: 30px;
+  margin-left: 70px;
+}
+
+.aboutme-class h1 {
+  color: rgb(216, 77, 13);
+  font-size: 6rem;
+  margin-bottom: 30px;
+}
+
+.aboutme-class p {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.white-line {
+  background-color: black;
+  height: 100px;
+  width: 100%;
+  padding: 0 60px 60px 60px;
+}
+
+.white-line .line2 {
+  height: 2px;
+  background-color: white;
+  margin: 0 60px 0 60px;
+}
+
+.category {
+  background-color: black;
+  height: auto;
+  width: 100%;
+  padding: 0 60px 60px 60px;
+  color: white;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-solid {
+  color: var(--accent-color);
+  padding: 0 10px 0 0;
+}
+
+.category h2 {
+  font-size: 2rem;
+}
+
+#paragraph {
+  color: black;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+.project-container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
+  gap: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.multipost-skill {
+  margin: 10px 15px 10px 0;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+}
+
+/* Style for each project box */
+.project-box {
+  position: relative;
+  overflow: hidden;
+  height: 393px;
+  max-width: 100%;
+}
+
+/* Style for the hover effect rectangle */
+.hover-effect {
+  position: absolute;
+  bottom: 0; /* Changed to bottom: 0; for positioning at the bottom */
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%); /* Initially hidden below the image */
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Style for the hover effect on hover */
+.project-box:hover .hover-effect {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-content {
+  position: absolute; /* Already positioned on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color for h1 and p */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* Center text horizontally */
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.project-content h1 {
+  padding-bottom: 20px;
+  padding-top: 80px;
+}
+
+.project-box:hover .project-content {
+  opacity: 0; /* Disappear on hover */
+}
+
+.button-container {
+  display: flex; /* Buttons displayed horizontally */
+  margin-top: 10px; /* Add some space between buttons and content */
+  padding-top: 30px;
+}
+
+/* Style for the buttons */
+.skill-button {
+  background-color: rgba(180, 159, 159, 0.8); /* Transparent white background */
+  border: none;
+  color: rgb(250, 244, 244); /* Button text color */
+  padding: 5px 10px; /* Adjust padding as needed */
+  cursor: pointer; /* Indicate clickable button */
+  font-size: 15px;
+  transition: background-color 0.3s ease; /* Add hover effect for buttons (optional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  margin: 0 5px; /* Add margin between buttons */
+}
+
+.skill-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
 }
 
 @media (max-width: 1280px) {
@@ -416,7 +560,7 @@ a:hover {
   }
 
   .project-container {
-    padding: 30px 0 0 0;
+    padding: 30px 0 30px 0;
   }
 
   .work-wrapper {
@@ -436,6 +580,10 @@ a:hover {
   .white-line,
   .category {
     padding: 0;
+  }
+
+  .contact-section p {
+    font-size: 2em;
   }
 }
 
@@ -491,6 +639,10 @@ a:hover {
 
   .Aboutme-banner {
     padding: 20px 0 0 0;
+  }
+
+  .contact-section p {
+    font-size: 1.8em;
   }
 }
 
@@ -671,6 +823,26 @@ a:hover {
   .project-container {
     padding: 30px 0 70px 0;
   }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-section p {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-right: 0; /* Remove right padding */
+  }
+
+  form {
+    width: 100%; /* Make the form take full width */
+  }
+
+  button {
+    align-self: center; /* Center the button */
+  }
 }
 
 @media (max-width: 600px) {
@@ -698,6 +870,12 @@ a:hover {
 
   .menu li.email-icon {
     display: none;
+  }
+
+  /* Add a smooth transition to the hover effect */
+  .project-effect a { /* Typo fixed: project-effect should be project-box */
+    text-decoration: none;
+    color: white; /* Adjust text color for better visibility over image */
   }
 
   .menu li a {
@@ -784,6 +962,7 @@ a:hover {
 @media (max-width: 547px) {
   .social-icons {
     left: 20%;
+    bottom: 25%;
   }
 
   .work-wrapper {
@@ -921,7 +1100,7 @@ a:hover {
 
 @media (max-width: 430px) {
   .social-icons {
-    bottom: 32%;
+    bottom: 35%;
   }
 
   .work-wrapper {
@@ -985,6 +1164,7 @@ a:hover {
 @media (max-width: 412px) {
   .social-icons {
     left: 22%;
+    bottom: 32%;
   }
 
   .banner-content p {
@@ -1003,7 +1183,7 @@ a:hover {
 
 @media (max-width: 390px) {
   .social-icons {
-    bottom: 30%;
+    bottom: 28%;
   }
 
   .Multi-post h1 {
@@ -1017,7 +1197,7 @@ a:hover {
 
 @media (max-width: 375px) {
   .social-icons {
-    bottom: 24%;
+    bottom: 21%;
   }
 
   .work-section {
@@ -1071,7 +1251,7 @@ a:hover {
 @media (max-width: 360px) {
   .social-icons {
     left: 25%;
-    bottom: 140px;
+    bottom: 24%;
   }
 
   .aboutme-class h1 {
@@ -1175,36 +1355,9 @@ a:hover {
   }
 }
 
-.work-section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.work-section .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: black;
-}
-
 .first-work-section {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   margin-top: 50px;
   justify-content: space-between;
-}
-
-button:hover {
-  background-color: rgb(156, 57, 11);
-}
-
-.project-container {
-  padding-bottom: 50px;
-}
-
-.project-box {
-  overflow: hidden;
-  height: 393px;
-  max-width: 100%;
 }
