@@ -587,6 +587,13 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 1250px) {
+  .Multi-post {
+    flex: 1;
+    max-width: 440px;
+  }
+}
+
 @media (max-width: 1024px) {
   .banner {
     background-size: 50% auto;
@@ -1251,7 +1258,7 @@ textarea::placeholder {
 @media (max-width: 360px) {
   .social-icons {
     left: 25%;
-    bottom: 24%;
+    bottom: 19%;
   }
 
   .aboutme-class h1 {
@@ -1263,16 +1270,33 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 344px) {
+  .social-icons {
+    bottom: 18%;
+  }
+
+  .Multi-post h1 {
+    font-size: 31px;
+  }
+}
+
+.first-work-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
 @media (max-width: 320px) {
   .social-icons {
     left: 31%;
   }
 }
 
-@media (max-width: 278px) {
+@media (max-width: 295px) {
   .social-icons {
     left: 34%;
-    bottom: 120px;
+    bottom: 25%;
   }
 
   .banner {
@@ -1283,7 +1307,7 @@ textarea::placeholder {
 @media (max-width: 250px) {
   .social-icons {
     left: 36%;
-    bottom: 110px;
+    bottom: 23%;
   }
 }
 
@@ -1343,21 +1367,4 @@ textarea::placeholder {
     color: var(--text-color);
     font-size: 0.3rem;
   }
-}
-
-@media (max-width: 344px) {
-  .social-icons {
-    bottom: 29%;
-  }
-
-  .Multi-post h1 {
-    font-size: 31px;
-  }
-}
-
-.first-work-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 50px;
-  justify-content: space-between;
 }
