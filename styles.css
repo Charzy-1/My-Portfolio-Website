@@ -552,6 +552,12 @@ textarea::placeholder {
   background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
 }
 
+@media (min-width: 1600px) {
+  .Multi-post {
+    max-width: 50%;
+  }
+}
+
 @media (max-width: 1280px) {
   .workimage img {
     width: 200%;
@@ -769,6 +775,10 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
+  .project-content h1 {
+    font-size: 20px;
+  }
+
   .banner-content h1 {
     color: var(--accent-color);
     font-size: 3rem;
