@@ -10,32 +10,42 @@
 
 
 <body>
-    <header>
-        <nav>
-            <ul class="nav-bar"> 
-                <li class="logo"><h1>My Logo</h1></li>
-                <input type="checkbox" id="check">
-                <span class="menu">
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="email-icon"><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-                    <label for="check" class="closemenu"><i class="fas fa-times"></i></label>
-                </span>
-                <label for="check" class="openmenu"><i class="fas fa-bars"></i></label>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+        <li class="logo">My Logo</li>
+
+        <ul class="navMenu">
+            <li class="navItems">
+                <a href="#" class="navLink">Portfolio</a>
+            </li>
+            <li class="navItems">
+                <a href="#" class="navLink">About</a>
+            </li>
+            <li class="navItems">
+                <a href="#" class="navLink">Contact</a>
+            </li>
+            <li class="navItems">
+                <a href="#" class="navLink"><i class="fa-regular fa-envelope"></i></a></a>
+            </li>
+        </ul>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
     
-    <div class="banner">
-        <div class="container">
-            <div class="social-icons">
-                <ul>
-                    <li><a href="#"><img class="github" src="./images/git-removebg-preview.png" alt="github svg "></a></li>
-                    <li><a href="#"><img src="./images/linkin.png" alt="linkedin svg"></a></li>
-                    <li><a href="#"><img src="./images/fing.png" alt="finger svg"></a></li>
-                    <li><a href="#"><img src="./images/Twit.png" alt="twitter svg"></a></li>
-                    <li><a href="#"><img src="./images/Mm.png" alt="medium svg"></a></li>
+  <div class="banner">
+      <div class="container">
+          <div class="social-icons">
+              <ul>
+                <li><a href="#"><img class="github" src="./images/git-removebg-preview.png" alt="github svg "></a></li>
+                <li><a href="#"><img src="./images/linkin.png" alt="linkedin svg"></a></li>
+                <li><a href="#"><img src="./images/fing.png" alt="finger svg"></a></li>
+                <li><a href="#"><img src="./images/Twit.png" alt="twitter svg"></a></li>
+                <li><a href="#"><img src="./images/Mm.png" alt="medium svg"></a></li>
                 </ul>
             </div>
             <div class="banner-content">
@@ -247,5 +257,6 @@
       </div>
    </div>
 </div>
+<script src="./script.js"></script>
 </body>
 </html>
