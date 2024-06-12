@@ -92,7 +92,9 @@ a {
 }
 
 #see-project:hover {
-  background-color: black;
+  background-color: rgb(250, 218, 159);
+  border: 1px solid orange;
+  color: #e8751a;
 }
 
 /* Popup container */
@@ -106,8 +108,12 @@ a {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.5);
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: center; /* Centered popup */
+  align-items: center; /* Centered popup */
+}
+
+.popup-skills {
+  margin-bottom: 20px; /* Added margin for better spacing */
 }
 
 /* Popup content */
@@ -116,11 +122,41 @@ a {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   text-align: left;
   position: relative;
 }
+
+.paragraphANDimg {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.popupImg {
+  width: 300%;
+  margin-bottom: 10px;
+}
+
+#popup-paragraph {
+  flex: 1; /* Ensures text takes up remaining space */
+  padding-bottom: 150px;
+  padding-right: 0;
+}
+
+.pbuttons {
+  display: inline-block;
+  justify-content: flex-end;
+  /* text-align: right; */
+}
+
+.pbuttons .fa-solid,
+.pbuttons .fa-brands {
+    color: white;
+    margin-left: 5px; 
+}
+
 
 /* Close button */
 .close-btn {
@@ -152,12 +188,14 @@ a {
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  justify-content: space-between;
 }
 
 .popup-button:hover {
-  background-color:black;
+  background-color: rgb(250, 218, 159);
+  border: 1px solid orange;
+  color: #e8751a;
 }
+
 
 .banner {
   background: url("./images/Backgroundimage (2).png") no-repeat right;
@@ -924,12 +962,27 @@ textarea::placeholder {
   font-size: 1.7rem;
 }
 
-.popup-content .paragraphANDbuttons {
-  text-align: justify;
+.paragraphANDimg {
+  flex-direction: column;
+  gap: 0;
 }
-.popup-content #popup-paragraph {
+
+#popup-paragraph {
   padding: 0;
 }
+
+.pbuttons {
+  /* flex-direction: column; */
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.pbuttons .fa-solid,
+.pbuttons .fa-brands {
+    color: white;
+    margin-left: 8px; 
+}
+
   .project-content h1 {
     font-size: 20px;
   }
