@@ -854,6 +854,10 @@ textarea::placeholder {
     display: block;
   }
 
+  .popupImg {
+    height: 0;
+  }
+
   .work-section {
     flex-direction: column; /* Stack elements vertically */
     margin-top: 20px;
@@ -952,8 +956,8 @@ textarea::placeholder {
   max-width: 600px;
 }
 
-.popup-content .popupImg {
-  height: 200px;
+.popupImg {
+  height: 300px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -1463,6 +1467,11 @@ textarea::placeholder {
   .Multi-post h1 {
     font-size: 33px;
   }
+
+  .popupImg {
+    height: 200px;
+}
+
 }
 
 @media (max-width: 344px) {
@@ -1470,10 +1479,14 @@ textarea::placeholder {
     bottom: 18%;
   }
 
+  .popup-button {
+    padding: 10px 10px;
+  }
+}
+
   .Multi-post h1 {
     font-size: 31px;
   }
-}
 
 .first-work-section {
   display: flex;
