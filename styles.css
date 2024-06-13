@@ -73,15 +73,6 @@ a {
   background-color: white;
 }
 
-.multipost-skill {
-  background-color: #f3f3f3;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 #see-project {
   background-color: #e8751a;
   color: white;
@@ -107,7 +98,7 @@ a {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: left;
   align-items: flex-start;
 }
@@ -122,6 +113,11 @@ a {
   margin: auto;
   text-align: left;
   position: relative;
+}
+
+.fa-solid {
+  color: var(--accent-color);
+  padding: 0 10px 0 0;
 }
 
 .popupbuttons-items .fa-solid,
@@ -555,11 +551,6 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
-.fa-solid {
-  color: var(--accent-color);
-  padding: 0 10px 0 0;
-}
-
 .category h2 {
   font-size: 2rem;
 }
@@ -830,22 +821,27 @@ textarea::placeholder {
     margin-top: 300px;
   }
 
-.work-section {
-    align-items: flex-start;
-}
+  p {
+    padding-right: 0;
+    text-align: justify;
+  }
 
-.work-section .line {
+  .work-section {
+    align-items: flex-start;
+  }
+
+  .work-section .line {
     max-width: 100%;
- }
+  }
 
   #popup-paragraph {
     padding-bottom: 90px;
     padding-right: 0;
-}
+  }
 
-.popupbuttons-items {
-  padding: 5px;
-}
+  .popupbuttons-items {
+    padding: 5px;
+  }
 
   .popup-content {
     margin: 20px;
@@ -929,7 +925,7 @@ textarea::placeholder {
   .popupbuttons-items {
     padding: 10px;
   }
-  
+
   .popup-content {
     max-width: 400px;
   }
@@ -984,35 +980,35 @@ textarea::placeholder {
     gap: 10px;
   }
 
-.popupImg {
-  height: 200px;
-  width: 100%;
-  margin-bottom: 10px;
-}
+  .popupImg {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-.popup-button {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 0;
-  margin-top: 10px;
-}
+  .popup-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+  }
 
-.popupH1 {
-  font-size: 1.7rem;
-}
+  .popupH1 {
+    font-size: 1.7rem;
+  }
 
-.paragraphANDbuttons {
-  text-align: justify;
-}
+  .paragraphANDbuttons {
+    text-align: justify;
+  }
 
-.popupmulti-skill {
-  font-size: 15px;
-}
+  .popupmulti-skill {
+    font-size: 15px;
+  }
 
-.paragraphANDimg {
-  flex-direction: column;
-}
+  .paragraphANDimg {
+    flex-direction: column;
+  }
 
   .project-content h1 {
     font-size: 20px;
@@ -1050,10 +1046,6 @@ textarea::placeholder {
 
   .work-section .line {
     max-width: 100%;
-  }
-
-  p {
-    padding-right: 0;
   }
 
   .multipost-skill {
@@ -1504,7 +1496,7 @@ textarea::placeholder {
 
   .popupbuttons-items {
     padding: 5px 10px;
-}
+  }
 
   .popupmulti-skill {
     font-size: 10px;
