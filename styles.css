@@ -92,9 +92,7 @@ a {
 }
 
 #see-project:hover {
-  background-color: rgb(250, 218, 159);
-  border: 1px solid orange;
-  color: #e8751a;
+  background-color: black;
 }
 
 /* Popup container */
@@ -108,12 +106,8 @@ a {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.5);
-  justify-content: center; /* Centered popup */
-  align-items: center; /* Centered popup */
-}
-
-.popup-skills {
-  margin-bottom: 20px; /* Added margin for better spacing */
+  justify-content: left;
+  align-items: flex-start;
 }
 
 /* Popup content */
@@ -122,41 +116,11 @@ a {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
   text-align: left;
   position: relative;
 }
-
-.paragraphANDimg {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.popupImg {
-  width: 300%;
-  margin-bottom: 10px;
-}
-
-#popup-paragraph {
-  flex: 1; /* Ensures text takes up remaining space */
-  padding-bottom: 150px;
-  padding-right: 0;
-}
-
-.pbuttons {
-  display: inline-block;
-  justify-content: flex-end;
-  /* text-align: right; */
-}
-
-.pbuttons .fa-solid,
-.pbuttons .fa-brands {
-    color: white;
-    margin-left: 5px; 
-}
-
 
 /* Close button */
 .close-btn {
@@ -188,14 +152,12 @@ a {
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  justify-content: space-between;
 }
 
 .popup-button:hover {
-  background-color: rgb(250, 218, 159);
-  border: 1px solid orange;
-  color: #e8751a;
+  background-color:black;
 }
-
 
 .banner {
   background: url("./images/Backgroundimage (2).png") no-repeat right;
@@ -854,10 +816,6 @@ textarea::placeholder {
     display: block;
   }
 
-  .popupImg {
-    height: 0;
-  }
-
   .work-section {
     flex-direction: column; /* Stack elements vertically */
     margin-top: 20px;
@@ -956,8 +914,8 @@ textarea::placeholder {
   max-width: 600px;
 }
 
-.popupImg {
-  height: 300px;
+.popup-content .popupImg {
+  height: 200px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -966,27 +924,12 @@ textarea::placeholder {
   font-size: 1.7rem;
 }
 
-.paragraphANDimg {
-  flex-direction: column;
-  gap: 0;
+.popup-content .paragraphANDbuttons {
+  text-align: justify;
 }
-
-#popup-paragraph {
+.popup-content #popup-paragraph {
   padding: 0;
 }
-
-.pbuttons {
-  /* flex-direction: column; */
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.pbuttons .fa-solid,
-.pbuttons .fa-brands {
-    color: white;
-    margin-left: 8px; 
-}
-
   .project-content h1 {
     font-size: 20px;
   }
@@ -1410,10 +1353,11 @@ textarea::placeholder {
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start */
     margin-top: 20px;
+    padding-left: 20px;
   }
 
   s .work-section .line {
-    width: 100%;
+    max-width: 100%;
   }
 
   .first-work-section {
@@ -1467,11 +1411,6 @@ textarea::placeholder {
   .Multi-post h1 {
     font-size: 33px;
   }
-
-  .popupImg {
-    height: 200px;
-}
-
 }
 
 @media (max-width: 344px) {
@@ -1479,14 +1418,10 @@ textarea::placeholder {
     bottom: 18%;
   }
 
-  .popup-button {
-    padding: 10px 10px;
-  }
-}
-
   .Multi-post h1 {
     font-size: 31px;
   }
+}
 
 .first-work-section {
   display: flex;
