@@ -88,11 +88,11 @@
         <h1 class="popupH1">Multi-Post Services</h1>
         <div class="popup-skills"> <!-- Added a wrapper for skill buttons -->
           <button class="popupmulti-skill">HTML</button>
-          <button class="popupmulti-skill">Boostrap</button>
-          <button class="popupmulti-skill">Ruby on rails</button>
+          <button class="popupmulti-skill">CSS</button>
+          <button class="popupmulti-skill">Javascript</button>
         </div>
         <div class="paragraphANDimg"> 
-          <img class="popupImg" src="./images/Snapshoot Portfolio.png" alt="a picture description of my work">
+          <img class="popupImg" src="./images/Img Placeholder (1).png" alt="a picture description of my work">
           <div class="pbuttons"> 
             <p id="popup-paragraph">A daily selection of privately personalized reads; no accounts or sign-up required. This has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
             <div class="popup-button">
@@ -106,23 +106,23 @@
   
     <!-- Projects section -->
     <div class="project-container" id="portfolio">
-        <div class="grid-container">
-          <div class="project-box">
+      <div class="grid-container">
+        <div class="project-box" data-project="1">
             <a href="#">
-              <div class="project-content">
-                <h1>Ecommerce Web</h1>
-                <p>This is an ecomerce website</p>
-                <div class="button-container"> 
-                  <button class="skill-button">HTML</button>
-                  <button class="skill-button">CSS</button>
-                  <button class="skill-button">Javascript</button>
+                <div class="project-content">
+                    <h1>Ecommerce Web</h1>
+                    <p>This is an ecommerce website</p>
+                    <div class="button-container"> 
+                        <button class="skill-button">HTML</button>
+                        <button class="skill-button">CSS</button>
+                        <button class="skill-button">Javascript</button>
+                    </div>
                 </div>
-              </div>
-              <img src="./images/images2.jpg" alt="my project snippet1">
+                <img src="./images/images2.jpg" alt="my project snippet1">
             </a>
             <div class="hover-effect">See Project</div>
-          </div>
-          <div class="project-box">
+        </div>
+          <div class="project-box" data-project="2">
             <a href="#">
               <div class="project-content">
                 <h1>Fin. xchange blog</h1>
@@ -137,7 +137,7 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-project="3">
             <a href="#">
               <div class="project-content">
                 <h1>Charzy Global Services</h1>
@@ -152,7 +152,7 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-project="4">
             <a href="#">
               <div class="project-content">
                 <h1>St. Barnabas Catholic Chaplaincy</h1>
@@ -167,7 +167,7 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-project="5">
             <a href="#">
               <div class="project-content">
                 <h1>Charzy Portfolio</h1>
@@ -182,7 +182,7 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-project="6">
             <a href="#">
               <div class="project-content">
                 <h1>Blog</h1>
@@ -199,8 +199,9 @@
           </div>
         </div>
       </div>
-      
-
+    
+    <div id="popup-container"></div>
+    
     <!-- About me section  -->
     <div class="Aboutme-banner" id="about">
         <div class="aboutme-class">
