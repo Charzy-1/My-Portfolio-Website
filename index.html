@@ -107,22 +107,22 @@
     <!-- Projects section -->
     <div class="project-container" id="portfolio">
       <div class="grid-container">
-        <div class="project-box" data-project="1">
-            <a href="#">
-                <div class="project-content">
-                    <h1>Ecommerce Web</h1>
-                    <p>This is an ecommerce website</p>
-                    <div class="button-container"> 
-                        <button class="skill-button">HTML</button>
-                        <button class="skill-button">CSS</button>
-                        <button class="skill-button">Javascript</button>
-                    </div>
-                </div>
-                <img src="./images/images2.jpg" alt="my project snippet1">
-            </a>
-            <div class="hover-effect">See Project</div>
+        <div class="project-box" data-name="p-1">
+          <a href="#">
+            <div class="project-content">
+              <h1>Ecommerce Web</h1>
+              <p>This is an ecommerce website</p>
+              <div class="button-container">
+                <button class="skill-button">HTML</button>
+                <button class="skill-button">CSS</button>
+                <button class="skill-button">Javascript</button>
+              </div>
+            </div>
+            <img src="./images/image1.jpg" alt="my project snippet1">
+          </a>
+          <div class="hover-effect">See Project</div>
         </div>
-          <div class="project-box" data-project="2">
+          <div class="project-box" data-name="p-2">
             <a href="#">
               <div class="project-content">
                 <h1>Fin. xchange blog</h1>
@@ -137,9 +137,9 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box" data-project="3">
+          <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div class="project-content" data-name="p-3">
                 <h1>Charzy Global Services</h1>
                 <p>My graphics and printing business site</p>
                 <div class="button-container"> 
@@ -152,9 +152,9 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box" data-project="4">
+          <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div class="project-content" data-name="p-4">
                 <h1>St. Barnabas Catholic Chaplaincy</h1>
                 <p>A Catholic church website in North Cyprus </p>
                 <div class="button-container"> 
@@ -167,9 +167,9 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box" data-project="5">
+          <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div class="project-content" data-name="p-5">
                 <h1>Charzy Portfolio</h1>
                 <p>This is Charzy's portfolio</p>
                 <div class="button-container"> 
@@ -178,13 +178,13 @@
                   <button class="skill-button">Javascript</button>
                 </div>
               </div>
-              <img src="./images/images4.jpg" alt="my project snippet5">
+              <img src="./images/image1.jpg" alt="my project snippet5">
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box" data-project="6">
+          <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div class="project-content" data-name="p-6">
                 <h1>Blog</h1>
                 <p>This blog allows post to be shared</p>
                 <div class="button-container"> 
@@ -199,9 +199,79 @@
           </div>
         </div>
       </div>
-    
-    <div id="popup-container"></div>
-    
+
+      <div id="popup-container"></div>
+      
+      <!-- <div class="projectbox-preview">
+        
+        <div class="preview" data-target="p-1">  
+          <span class="close-btn">&times;</span>
+          <h1>Ecommerce Web</h1>
+          <img src="./images/image3.jpg" alt="my project snippet3">
+          <p>This is an ecomerce website</p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="preview" data-target="p-2">
+          <span class="close-btn">&times;</span>
+          <h1>Fin. xchange blog</h1>
+          <img src="./images/image5.jpg" alt="my project snippet3">
+          <p>This is for currency trading</p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="preview" data-target="p-3">
+          <span class="close-btn">&times;</span>
+          <h1>Charzy Global Services</h1>
+          <img src="./images/image3.jpg" alt="my project snippet3">
+          <p>My graphics and printing business site</p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="preview" data-target="p-4">
+          <span class="close-btn">&times;</span>
+          <h1>St. Barnabas Catholic Chaplaincy</h1>
+          <img src="./images/image3.jpg" alt="my project snippet3">
+          <p>A Catholic church website in North Cyprus </p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="preview" data-target="p-5">
+          <span class="close-btn">&times;</span>
+          <span class="close-btn">&times;</span>
+          <img src="./images/image3.jpg" alt="my project snippet3">
+          <p>This is Charzy's portfolio</p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="preview" data-target="p-6">
+          <span class="close-btn">&times;</span>
+          <h1>Blog</h1>
+          <img src="./images/image3.jpg" alt="my project snippet3">
+          <p>This blog allows post to be shared</p>
+          <div class="popup-button">
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div> -->
+
     <!-- About me section  -->
     <div class="Aboutme-banner" id="about">
         <div class="aboutme-class">
