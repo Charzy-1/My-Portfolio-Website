@@ -76,17 +76,17 @@
                  <button class="multipost-skill">CSS</button>
                  <button class="multipost-skill">Javascript</button>
              
-                 <div><button id="see-project">See project</button></div>
+                 <div><button onclick="open_popup(0)" id="see-project">See project</button></div>
              </div>
          </div>
      </div>
      
-    <!-- Popup structure -->
+    <!-- Popup structure
     <div class="popup" id="popup">
       <div class="popup-content">
         <span class="close-btn" id="close-popup">&times;</span>
         <h1 class="popupH1">Multi-Post Services</h1>
-        <div class="popup-skills"> <!-- Added a wrapper for skill buttons -->
+        <div class="popup-skills"> 
           <button class="popupmulti-skill">HTML</button>
           <button class="popupmulti-skill">Boostrap</button>
           <button class="popupmulti-skill">Ruby on rails</button>
@@ -102,14 +102,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   
     <!-- Projects section -->
     <div class="project-container" id="portfolio">
         <div class="grid-container">
           <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div onclick="open_popup(1)" class="project-content">
                 <h1>Ecommerce Web</h1>
                 <p>This is an ecomerce website</p>
                 <div class="button-container"> 
@@ -124,7 +124,7 @@
           </div>
           <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div onclick="open_popup(2)" class="project-content">
                 <h1>Fin. xchange blog</h1>
                 <p>This is for currency trading</p>
                  <div class="button-container"> 
@@ -139,7 +139,7 @@
           </div>
           <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div onclick="open_popup(3)" class="project-content">
                 <h1>Charzy Global Services</h1>
                 <p>My graphics and printing business site</p>
                 <div class="button-container"> 
@@ -154,7 +154,7 @@
           </div>
           <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div onclick="open_popup(4)" class="project-content">
                 <h1>St. Barnabas Catholic Chaplaincy</h1>
                 <p>A Catholic church website in North Cyprus </p>
                 <div class="button-container"> 
@@ -169,7 +169,7 @@
           </div>
           <div class="project-box">
             <a href="#">
-              <div class="project-content">
+              <div onclick="open_popup(5)" class="project-content">
                 <h1>Charzy Portfolio</h1>
                 <p>This is Charzy's portfolio</p>
                 <div class="button-container"> 
@@ -182,7 +182,7 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
+          <div onclick="open_popup(6)" class="project-box">
             <a href="#">
               <div class="project-content">
                 <h1>Blog</h1>
@@ -200,7 +200,24 @@
         </div>
       </div>
       
-      <div id="popup-container"></div>
+      <!-- Popup structure -->
+      <div class="modal-popup" id="modal-popup">
+        <div class="popup-contents">
+          <span class="close-btn" id="close-btn">&times;</span>
+          <h2 id="popup-title">my popup</h2>
+          <button class="popupmulti-skill">HTML</button>
+          <button class="popupmulti-skill">Boostrap</button>
+          <button class="popupmulti-skill">Ruby on rails</button>
+          <img id="popup-image" src="" alt="Project image">
+          <p id="popup-description"></p>
+          <div>
+            <a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a>
+            <a id="popup-live-link" href="#" target="_blank">Live Link</a>
+            <a id="popup-source-link" href="#" target="_blank">Source Link</a>
+          </div>
+        </div>
+      </div>
 
     <!-- About me section  -->
     <div class="Aboutme-banner" id="about">

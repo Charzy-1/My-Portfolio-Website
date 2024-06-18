@@ -11,43 +11,29 @@ document.querySelectorAll('.navLink').forEach(n => n.addEventListener('click', (
   navmenu.classList.remove('active');
 }));
 
-document.addEventListener('DOMContentLoaded', () => {
-  const seeProjectButton = document.getElementById('see-project');
-  const popup = document.getElementById('popup');
-  const closePopupButton = document.getElementById('close-popup');
 
-  seeProjectButton.addEventListener('click', () => {
-    popup.classList.add('active');
-  });
-
-  closePopupButton.addEventListener('click', () => {
-    popup.classList.remove('active');
-  });
-
-  // Close the popup if the user clicks outside of it
-  window.addEventListener('click', (event) => {
-    if (event.target === popup) {
-      popup.classList.remove('active');
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const projects = [
-    {
-      title: 'Ecommerce Web',
-      description: 'This is an ecommerce website',
-      imgSrc: './images/images2.jpg',
-      liveLink: '#',
-      sourceLink: '#'
-    },
-    {
-      title: 'Fin. xchange blog',
-      description: 'This is for currency trading',
-      imgSrc: './images/image5.jpg',
-      liveLink: '#',
-      sourceLink: '#'
-    },
+ const projects = [
+  {
+    title: 'Multi-Post Services',
+    description: 'A daily selection of privately personalized reads; no accounts or sign-up required. This has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    imgSrc: './images/Img Placeholder (1).png',
+    liveLink: '#',
+    sourceLink: '#'
+  },
+  {
+    title: 'Ecommerce Web',
+    description: 'This is an ecommerce website',
+    imgSrc: './images/images2.jpg',
+    liveLink: '#',
+    sourceLink: '#'
+  },
+  {
+    title: 'Fin. xchange blog',
+    description: 'This is for currency trading',
+    imgSrc: './images/image5.jpg',
+    liveLink: '#',
+    sourceLink: '#'
+  },
     {
       title: 'Charzy Global Services',
       description: 'My graphics and printing business site',
@@ -78,45 +64,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const projectBoxes = document.querySelectorAll('.project-box');
-  const popupContainer = document.getElementById('popup-container');
+function open_popup(id) {
+  const project = projects[id - 0]; // id is 1-based index, so adjust to 0-based
+  document.getElementById('popup-title').innerText = project.title;
+  document.getElementById('popup-description').innerText = project.description;
+  document.getElementById('popup-image').src = project.imgSrc;
+  document.getElementById('popup-live-link').href = project.liveLink;
+  document.getElementById('popup-source-link').href = project.sourceLink;
+  document.getElementById('modal-popup').style.display = 'block';  
+};
 
-  projectBoxes.forEach((box, index) => {
-    box.querySelector('.hover-effect').addEventListener('click', () => {
-      const project = projects[index];
+let modal = document.getElementById('modal-popup');
 
-      const popup = document.createElement('div');
-      popup.className = 'project-popup active';
-      popup.innerHTML = `
-              <div class="project-popup-content">
-                  <span class="close-btn">&times;</span>
-                  <h1 class="popupH1">${project.title}</h1>
-                  <div class="paragraphANDimg">
-                      <img class="popupImg" src="${project.imgSrc}" alt="Project image">
-                      <p id="popup-paragraph">${project.description}</p>
-                  </div>
-                  <div class="pbuttons">
-                      <a href="${project.liveLink}" class="popup-button">See live<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                      <a href="${project.sourceLink}" class="popup-button">See source<i class="fa-brands fa-github"></i></a>
-                  </div>
-              </div>
-          `;
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
 
-      popup.querySelector('.close-btn').addEventListener('click', () => {
-        popup.classList.remove('active');
-        setTimeout(() => popupContainer.removeChild(popup), 300); // Wait for animation to finish
-      });
+document.getElementById('close-btn').onclick = function() {
+  modal.style.display = 'none';
+};
 
-// Close the popup if the user clicks outside of it
-      window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-          popup.classList.remove('active');
-          setTimeout(() => popupContainer.removeChild(popup), 300); // Wait for animation to finish
-        }
-      });
 
-      popupContainer.appendChild(popup);
-    });
-  });
-});
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const seeProjectButton = document.getElementById('see-project');
+//   const popup = document.getElementById('popup');
+//   const closePopupButton = document.getElementById('close-popup');
+
+//   seeProjectButton.addEventListener('click', () => {
+//     popup.classList.add('active');
+//   });
+
+//   closePopupButton.addEventListener('click', () => {
+//     popup.classList.remove('active');
+//   });
+
+//   // Close the popup if the user clicks outside of it
+//   window.addEventListener('click', (event) => {
+//     if (event.target === popup) {
+//       popup.classList.remove('active');
+//     }
+//   });
+// });
