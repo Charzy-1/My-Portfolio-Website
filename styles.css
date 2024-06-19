@@ -679,7 +679,6 @@ textarea::placeholder {
 
 .project-content h1 {
   padding-bottom: 20px;
-  padding-top: 80px;
 }
 
 .project-box:hover .project-content {
@@ -1357,7 +1356,8 @@ textarea::placeholder {
 
   .project-content h1 {
     padding-bottom: 20px;
-    padding-top: 80px;
+
+    /* padding-top: 80px; */
   }
 
   .project-box:hover .project-content {

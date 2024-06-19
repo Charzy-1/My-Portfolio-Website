@@ -15,50 +15,50 @@ document.querySelectorAll('.navLink').forEach(n => n.addEventListener('click', (
 const projects = [
   {
     title: 'Multi-Post Services',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-up required. This has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     imgSrc: './images/Img Placeholder (1).png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'Ecommerce Web',
-    description: 'This is an ecommerce website',
-    imgSrc: './images/images2.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'Fin. xchange blog',
-    description: 'This is for currency trading',
-    imgSrc: './images/image5.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'Charzy Global Services',
-    description: 'My graphics and printing business site',
-    imgSrc: './images/image3.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'St. Barnabas Catholic Chaplaincy',
-    description: 'A Catholic church website in North Cyprus',
-    imgSrc: './images/image3.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'Charzy Portfolio',
-    description: 'This is Charzy\'s portfolio',
-    imgSrc: './images/images4.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   },
   {
-    title: 'Blog',
-    description: 'This blog allows post to be shared',
-    imgSrc: './images/image5.jpg',
+    title: 'Multi-Post Services',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    imgSrc: './images/Snapshoot Portfolio.png',
     liveLink: '#',
     sourceLink: '#'
   }
