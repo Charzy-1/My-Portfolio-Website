@@ -90,7 +90,7 @@ a {
 
 /* Popup container */
 .popup {
-  display: none; /* Hidden by default */
+  /* display: none; /* Hidden by default */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -101,7 +101,7 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: left;
   align-items: flex-start;
-}
+} */
 
 /* Popup content */
 .popup-content {
@@ -144,7 +144,7 @@ a {
 }
 
 #popup-image {
-  max-width: 100%;
+  width: 200%;
   height: auto;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -234,7 +234,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  width: 60%;
+  width: 80%;
 }
 
 .banner {
@@ -708,11 +708,6 @@ textarea::placeholder {
   background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
 }
 
-@media (min-width: 1600px) {
-  .Multi-post {
-    max-width: 50%;
-  }
-}
 
 @media (max-width: 1280px) {
   .workimage img {
@@ -756,9 +751,22 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 1090px) {
+  .workimage img {
+  width: 155%;
+}
+}
+
+@media (max-width: 1063px) {
+  .Multi-post {
+    max-width: 420px;
+}
+}
+
+
 @media (max-width: 1024px) {
   .popup-contents {
-    width: 70%;
+    width: 90%;
   }
 
   .popupbuttons-items {
@@ -770,12 +778,16 @@ textarea::placeholder {
   }
 
   .Multi-post {
-    flex: 1; /* Allow the text to take full width */
-    max-width: 350px; /* Optional: limit the maximum width */
+    flex: 1; 
+    max-width: 320px; 
   }
 
   .Multi-post h1 {
     font-size: 30px;
+  }
+
+  .project-content h1 {
+    font-size: 25px;
   }
 
   #paragraph {
@@ -825,8 +837,12 @@ textarea::placeholder {
 
 @media (max-width: 912px) {
   .popup-contents {
-    width: 80%;
+    width: 90%;
   }
+
+  #popup-image {
+    width: 300%;
+}
 
   .project-container .grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
@@ -1273,6 +1289,10 @@ textarea::placeholder {
   #popup-title {
     padding-left: 1rem;
   }
+
+  #popup-image {
+    max-width: 100%;
+}
 
   .imgAndparaph {
     flex-direction: column;
