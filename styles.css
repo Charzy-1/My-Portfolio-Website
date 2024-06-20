@@ -16,6 +16,10 @@ header {
   background-color: #524c42;
 }
 
+p {
+  padding-right: 30px;
+}
+
 li {
   list-style: none;
 }
@@ -61,6 +65,26 @@ a {
   display: none;
   cursor: pointer;
   z-index: 100;
+}
+
+.first-work-section {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.first-work-section img {
+  width: 50vw;
+}
+
+.Multi-post p {
+  padding: 0;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.Multi-post {
+  width: 50vw;
 }
 
 .bar {
@@ -129,11 +153,6 @@ a {
 .popupbuttons-items .fa-brands {
   color: white;
   margin-left: 5px; /* Added margin for spacing */
-}
-
-.popupImg {
-  height: 300px;
-  width: 60%;
 }
 
 #popup-title {
@@ -247,10 +266,6 @@ a {
   background-color: black;
 }
 
-p {
-  padding-right: 30px;
-}
-
 .container {
   width: 100%;
   height: 100%;
@@ -275,12 +290,6 @@ p {
 .banner-content h1 {
   color: var(--accent-color);
   font-size: 4rem;
-}
-
-.workimage img {
-  width: 200%;
-  height: 100%;
-  display: block;
 }
 
 .banner-content h2 {
@@ -540,11 +549,6 @@ textarea::placeholder {
   padding: 70px 70px 0 70px;
 }
 
-.Multi-post {
-  flex: 1;
-  max-width: 500px;
-}
-
 .Multi-post h1 {
   font-size: 40px;
 }
@@ -603,12 +607,6 @@ textarea::placeholder {
 
 .category h2 {
   font-size: 2rem;
-}
-
-#paragraph {
-  color: black;
-  line-height: 40px;
-  font-size: 30px;
 }
 
 .project-container .grid-container {
@@ -707,13 +705,13 @@ textarea::placeholder {
   background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
 }
 
-@media (max-width: 1280px) {
-  .workimage img {
-    width: 200%;
-    height: 100%;
-    display: block;
+@media (max-width: 2000px) {
+  .first-work-section img {
+    width: 70vw;
   }
+}
 
+@media (max-width: 1280px) {
   .project-container {
     padding: 30px 0 30px 0;
   }
@@ -721,11 +719,6 @@ textarea::placeholder {
   .work-wrapper {
     margin: 20px 60px;
     padding: 70px 0 0 0;
-  }
-
-  .Multi-post {
-    flex: 1;
-    max-width: 480px;
   }
 
   .aboutme-class {
@@ -742,25 +735,6 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 1250px) {
-  .Multi-post {
-    flex: 1;
-    max-width: 440px;
-  }
-}
-
-@media (max-width: 1090px) {
-  .workimage img {
-    width: 155%;
-  }
-}
-
-@media (max-width: 1063px) {
-  .Multi-post {
-    max-width: 420px;
-  }
-}
-
 @media (max-width: 1024px) {
   .popup-contents {
     width: 90%;
@@ -774,11 +748,6 @@ textarea::placeholder {
     background-size: 50% auto;
   }
 
-  .Multi-post {
-    flex: 1;
-    max-width: 320px;
-  }
-
   .Multi-post h1 {
     font-size: 30px;
   }
@@ -787,20 +756,8 @@ textarea::placeholder {
     font-size: 25px;
   }
 
-  #paragraph {
-    font-size: 22px;
-    line-height: 30px;
-    margin-bottom: 0;
-  }
-
   button {
     font-size: 19px;
-  }
-
-  .workimage img {
-    width: 140%;
-    height: 100%;
-    display: block;
   }
 
   .category h2 {
@@ -833,6 +790,14 @@ textarea::placeholder {
 }
 
 @media (max-width: 912px) {
+  .first-work-section img {
+    width: 85vw;
+  }
+
+  .Multi-post {
+    width: 85vw;
+  }
+
   .popup-contents {
     width: 90%;
   }
@@ -840,19 +805,14 @@ textarea::placeholder {
   #popup-image {
     width: 50vw;
     height: 27vh;
-}
+  }
 
-#popup-description {
-  margin-bottom: 55px;
-}
+  #popup-description {
+    margin-bottom: 55px;
+  }
 
   .project-container .grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-  }
-
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 350px;
   }
 
   .multipost-skill {
@@ -869,12 +829,6 @@ textarea::placeholder {
     flex-direction: column;
   }
 
-  .workimage img {
-    width: 100%;
-    height: 70%;
-    display: block;
-  }
-
   .category h2 {
     font-size: 1.3rem;
   }
@@ -882,11 +836,6 @@ textarea::placeholder {
   .category-container li {
     padding-bottom: 40px;
     padding-right: 30px;
-  }
-
-  #paragraph {
-    font-size: 35px;
-    line-height: 40px;
   }
 
   button {
@@ -897,12 +846,6 @@ textarea::placeholder {
 @media (max-width: 853px) {
   #popup-description {
     margin-right: 20px;
-  }
-
-  .Multi-post {
-    flex: 1;
-    max-width: 100%;
-    margin-top: 300px;
   }
 
   p {
@@ -918,6 +861,11 @@ textarea::placeholder {
     max-width: 100%;
   }
 
+  #popup-image {
+    width: 50vw;
+    height: 35vh;
+  }
+
   .popup-content {
     position: absolute;
     width: 80%;
@@ -929,12 +877,6 @@ textarea::placeholder {
 
   .popupbuttons-items {
     padding: 5px;
-  }
-
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   .category-container li {
@@ -955,12 +897,6 @@ textarea::placeholder {
   #popup-image {
     width: 50vw;
     height: 30vh;
-}
-
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   .work-section {
@@ -975,11 +911,6 @@ textarea::placeholder {
 
   .work-section .line {
     width: 100%;
-  }
-
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 270px;
   }
 
   .work-wrapper {
@@ -1150,19 +1081,8 @@ textarea::placeholder {
     padding: 10px;
   }
 
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 250px;
-  }
-
   .Multi-post h1 {
     margin-bottom: 20px;
-  }
-
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   .category {
@@ -1300,7 +1220,7 @@ textarea::placeholder {
   #popup-image {
     width: 90vw;
     height: 40vh;
-}
+  }
 
   .imgAndparaph {
     flex-direction: column;
@@ -1313,10 +1233,6 @@ textarea::placeholder {
 
   .work-wrapper {
     margin: 20px 40px;
-  }
-
-  .Multi-post {
-    margin-top: 120px;
   }
 
   .project-container .grid-container {
@@ -1378,14 +1294,8 @@ textarea::placeholder {
     padding: 0 0 40px 0;
   }
 
-  #paragraph {
-    line-height: 40px;
-  }
-
   .project-content h1 {
     padding-bottom: 20px;
-
-    /* padding-top: 80px; */
   }
 
   .project-box:hover .project-content {
@@ -1413,8 +1323,6 @@ textarea::placeholder {
 @media (max-width: 515px) {
   .banner {
     background-image: url("./images/mobilbackground.png");
-
-    /* background-size: 50% auto; */
   }
 
   .container {
@@ -1452,7 +1360,7 @@ textarea::placeholder {
 
   #popup-image {
     height: 30vh;
-}
+  }
 
   .social-icons {
     bottom: 35%;
@@ -1464,10 +1372,6 @@ textarea::placeholder {
 
   .work-section h1 {
     font-size: 40px;
-  }
-
-  .Multi-post {
-    margin-top: 40px;
   }
 
   #parapraph {
@@ -1524,7 +1428,7 @@ textarea::placeholder {
 
   #popup-image {
     height: 30vh;
-}
+  }
 
   .banner-content p {
     font-size: 1.2rem;
@@ -1577,22 +1481,11 @@ textarea::placeholder {
     margin: 0 8px;
   }
 
-  .workimage,
-  .Multi-post {
-    max-width: 100%;
-    margin: 10px 0;
-    flex: 1 1 auto;
-  }
-
   .work-section h1 {
     margin-bottom: 30px;
     padding-right: 20px;
     white-space: nowrap;
     font-size: clamp(10px, 10vw, 36px);
-  }
-
-  #paragraph {
-    font-size: 25px;
   }
 
   .Multi-post .multipost-skill {
@@ -1635,13 +1528,6 @@ textarea::placeholder {
   .Multi-post h1 {
     font-size: 31px;
   }
-}
-
-.first-work-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 50px;
-  justify-content: space-between;
 }
 
 @media (max-width: 320px) {
