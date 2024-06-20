@@ -1060,7 +1060,7 @@ textarea::placeholder {
     color: var(--text-color);
     font-size: 1.2rem;
   }
-  
+
   .project-container .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
