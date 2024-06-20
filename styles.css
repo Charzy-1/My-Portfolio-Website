@@ -16,6 +16,10 @@ header {
   background-color: #524c42;
 }
 
+p {
+  padding-right: 30px;
+}
+
 li {
   list-style: none;
 }
@@ -63,6 +67,26 @@ a {
   z-index: 100;
 }
 
+.first-work-section {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.first-work-section img {
+  width: 50vw;
+}
+
+.Multi-post p {
+  padding: 0;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.Multi-post {
+  width: 50vw;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -71,6 +95,164 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: white;
+}
+
+#see-project {
+  background-color: #e8751a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#see-project:hover {
+  background-color: rgb(207, 221, 83);
+  border: 2px solid darkorange;
+  color: darkorange;
+}
+
+/* Popup container */
+.popup {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: left;
+  align-items: flex-start;
+}
+
+/* Popup content */
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  position: relative;
+}
+
+.imgAndparaph {
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.fa-solid {
+  color: var(--accent-color);
+  padding: 0 10px 0 0;
+}
+
+.popupbuttons-items .fa-solid,
+.popupbuttons-items .fa-brands {
+  color: white;
+  margin-left: 5px; /* Added margin for spacing */
+}
+
+#popup-title {
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1.6rem;
+}
+
+#popup-image {
+  width: 50vw;
+  height: 69vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#popup-description {
+  text-align: justify;
+  margin-bottom: 90px;
+}
+
+.popupbuttons-items {
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #e8751a;
+  transition: background-color 0.3s ease;
+}
+
+.popupbuttons-items:hover {
+  background-color: rgb(87, 88, 75);
+  border: 2px solid darkorange;
+  color: darkorange;
+}
+
+.popupmulti-skill {
+  margin: 1rem 0;
+  white-space: nowrap;
+  border-radius: 0;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 15px;
+  color: black;
+  margin-left: 1rem;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+}
+
+/* Show popup when active */
+.popup.active {
+  display: flex;
+}
+
+.popup-button {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#popup-paragraph {
+  padding-bottom: 123px;
+}
+
+.modal-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgb(0, 0, 0, 0.8);
+  justify-content: space-between;
+}
+
+.popup-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 80%;
 }
 
 .banner {
@@ -82,10 +264,6 @@ a {
   align-items: center;
   justify-content: center;
   background-color: black;
-}
-
-p {
-  padding-right: 30px;
 }
 
 .container {
@@ -112,12 +290,6 @@ p {
 .banner-content h1 {
   color: var(--accent-color);
   font-size: 4rem;
-}
-
-.workimage img {
-  width: 200%;
-  height: 100%;
-  display: block;
 }
 
 .banner-content h2 {
@@ -377,11 +549,6 @@ textarea::placeholder {
   padding: 70px 70px 0 70px;
 }
 
-.Multi-post {
-  flex: 1;
-  max-width: 500px;
-}
-
 .Multi-post h1 {
   font-size: 40px;
 }
@@ -438,19 +605,8 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
-.fa-solid {
-  color: var(--accent-color);
-  padding: 0 10px 0 0;
-}
-
 .category h2 {
   font-size: 2rem;
-}
-
-#paragraph {
-  color: black;
-  line-height: 40px;
-  font-size: 30px;
 }
 
 .project-container .grid-container {
@@ -520,7 +676,6 @@ textarea::placeholder {
 
 .project-content h1 {
   padding-bottom: 20px;
-  padding-top: 80px;
 }
 
 .project-box:hover .project-content {
@@ -550,19 +705,13 @@ textarea::placeholder {
   background-color: rgba(255, 255, 255, 1); /* Change button background color slightly on hover (optional) */
 }
 
-@media (min-width: 1600px) {
-  .Multi-post {
-    max-width: 50%;
+@media (max-width: 2000px) {
+  .first-work-section img {
+    width: 70vw;
   }
 }
 
 @media (max-width: 1280px) {
-  .workimage img {
-    width: 200%;
-    height: 100%;
-    display: block;
-  }
-
   .project-container {
     padding: 30px 0 30px 0;
   }
@@ -570,11 +719,6 @@ textarea::placeholder {
   .work-wrapper {
     margin: 20px 60px;
     padding: 70px 0 0 0;
-  }
-
-  .Multi-post {
-    flex: 1;
-    max-width: 480px;
   }
 
   .aboutme-class {
@@ -591,41 +735,29 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 1250px) {
-  .Multi-post {
-    flex: 1;
-    max-width: 440px;
-  }
-}
-
 @media (max-width: 1024px) {
+  .popup-contents {
+    width: 90%;
+  }
+
+  .popupbuttons-items {
+    padding: 10px;
+  }
+
   .banner {
     background-size: 50% auto;
-  }
-
-  .Multi-post {
-    flex: 1; /* Allow the text to take full width */
-    max-width: 350px; /* Optional: limit the maximum width */
   }
 
   .Multi-post h1 {
     font-size: 30px;
   }
 
-  #paragraph {
-    font-size: 22px;
-    line-height: 30px;
-    margin-bottom: 0;
+  .project-content h1 {
+    font-size: 25px;
   }
 
   button {
     font-size: 19px;
-  }
-
-  .workimage img {
-    width: 160%;
-    height: 100%;
-    display: block;
   }
 
   .category h2 {
@@ -658,13 +790,35 @@ textarea::placeholder {
 }
 
 @media (max-width: 912px) {
+  .first-work-section img {
+    width: 85vw;
+  }
+
+  .Multi-post {
+    width: 85vw;
+  }
+
+  .popup-contents {
+    width: 90%;
+  }
+
+  #popup-image {
+    width: 50vw;
+    height: 27vh;
+  }
+
+  #popup-description {
+    margin-bottom: 55px;
+  }
+
   .project-container .grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
   }
 
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 350px;
+  .multipost-skill {
+    font-size: 30px;
+    margin: 40px 10px;
+    padding: 20px;
   }
 
   .Multi-post h1 {
@@ -673,12 +827,6 @@ textarea::placeholder {
 
   .first-work-section {
     flex-direction: column;
-  }
-
-  .workimage img {
-    width: 100%;
-    height: 70%;
-    display: block;
   }
 
   .category h2 {
@@ -690,27 +838,45 @@ textarea::placeholder {
     padding-right: 30px;
   }
 
-  #paragraph {
-    font-size: 35px;
-    line-height: 40px;
-  }
-
   button {
     font-size: 35px;
   }
 }
 
 @media (max-width: 853px) {
-  .Multi-post {
-    flex: 1;
-    max-width: 100%;
-    margin-top: 300px;
+  #popup-description {
+    margin-right: 20px;
   }
 
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
+  p {
+    padding-right: 0;
+    text-align: justify;
+  }
+
+  .work-section {
+    align-items: flex-start;
+  }
+
+  .work-section .line {
+    max-width: 100%;
+  }
+
+  #popup-image {
+    width: 50vw;
+    height: 35vh;
+  }
+
+  .popup-content {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    margin: 2rem;
+    padding: 2rem;
+    max-width: 650px;
+  }
+
+  .popupbuttons-items {
+    padding: 5px;
   }
 
   .category-container li {
@@ -724,10 +890,13 @@ textarea::placeholder {
 }
 
 @media (max-width: 820px) {
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
+  .popup-contents {
+    width: 90%;
+  }
+
+  #popup-image {
+    width: 50vw;
+    height: 30vh;
   }
 
   .work-section {
@@ -737,16 +906,11 @@ textarea::placeholder {
 
   .work-section h1 {
     margin-bottom: 40px;
-    font-size: 75px;
+    font-size: 65px;
   }
 
   .work-section .line {
     width: 100%;
-  }
-
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 270px;
   }
 
   .work-wrapper {
@@ -775,6 +939,22 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+  }
+
+  #popup-paragraph {
+    padding-bottom: 10px;
+  }
+
+  .popupbuttons-items {
+    padding: 10px;
+  }
+
+  .popup-content {
+    max-width: 80%;
+  }
+
+  #popup-title {
+    padding-left: 1.5rem;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -822,6 +1002,41 @@ textarea::placeholder {
     font-size: 1.5rem;
   }
 
+  .popup-skills {
+    display: flex;
+    gap: 10px;
+  }
+
+  .popupImg {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .popup-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .popupH1 {
+    font-size: 1.7rem;
+  }
+
+  .paragraphANDbuttons {
+    text-align: justify;
+  }
+
+  .popupmulti-skill {
+    font-size: 15px;
+  }
+
+  .paragraphANDimg {
+    flex-direction: column;
+  }
+
   .project-content h1 {
     font-size: 20px;
   }
@@ -846,33 +1061,32 @@ textarea::placeholder {
     font-size: 1.2rem;
   }
 
+  .project-container .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .work-section {
     flex-direction: column; /* Stack elements vertically */
     margin-top: 20px;
+    align-items: flex-start;
   }
 
   .work-section h1 {
     margin-bottom: 40px;
-    font-size: 75px;
   }
 
   .work-section .line {
-    width: 100%;
+    max-width: 100%;
   }
 
-  .Multi-post {
-    max-width: 100%;
-    margin-top: 250px;
+  .multipost-skill {
+    font-size: 20px;
+    margin: 10px 0 10px 5px;
+    padding: 10px;
   }
 
   .Multi-post h1 {
     margin-bottom: 20px;
-  }
-
-  .workimage img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   .category {
@@ -910,7 +1124,6 @@ textarea::placeholder {
 }
 
 @media (max-width: 600px) {
-  /* Add a smooth transition to the hover effect */
   .project-effect a { /* Typo fixed: project-effect should be project-box */
     text-decoration: none;
     color: white; /* Adjust text color for better visibility over image */
@@ -996,6 +1209,27 @@ textarea::placeholder {
 }
 
 @media (max-width: 547px) {
+  #popup-description {
+    margin: 20px;
+  }
+
+  .popupbuttons-items {
+    margin-left: 20px;
+  }
+
+  #popup-title {
+    padding-left: 1rem;
+  }
+
+  #popup-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .imgAndparaph {
+    flex-direction: column;
+  }
+
   .social-icons {
     left: 20%;
     bottom: 25%;
@@ -1003,10 +1237,6 @@ textarea::placeholder {
 
   .work-wrapper {
     margin: 20px 40px;
-  }
-
-  .Multi-post {
-    margin-top: 120px;
   }
 
   .project-container .grid-container {
@@ -1068,13 +1298,8 @@ textarea::placeholder {
     padding: 0 0 40px 0;
   }
 
-  #paragraph {
-    line-height: 40px;
-  }
-
   .project-content h1 {
     padding-bottom: 20px;
-    padding-top: 80px;
   }
 
   .project-box:hover .project-content {
@@ -1102,8 +1327,6 @@ textarea::placeholder {
 @media (max-width: 515px) {
   .banner {
     background-image: url("./images/mobilbackground.png");
-
-    /* background-size: 50% auto; */
   }
 
   .container {
@@ -1135,6 +1358,14 @@ textarea::placeholder {
 }
 
 @media (max-width: 430px) {
+  .popupmulti-skill {
+    font-size: 10px;
+  }
+
+  #popup-image {
+    height: 30vh;
+  }
+
   .social-icons {
     bottom: 35%;
   }
@@ -1147,10 +1378,6 @@ textarea::placeholder {
     font-size: 40px;
   }
 
-  .Multi-post {
-    margin-top: 40px;
-  }
-
   #parapraph {
     font-size: 25px;
     text-align: justify;
@@ -1158,11 +1385,6 @@ textarea::placeholder {
 
   .Multi-post h1 {
     font-size: 38px;
-  }
-
-  .project-container .grid-container {
-    /* margin: 0 20px 0; */
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .Aboutme-banner {
@@ -1203,6 +1425,10 @@ textarea::placeholder {
     bottom: 32%;
   }
 
+  #popup-image {
+    height: 30vh;
+  }
+
   .banner-content p {
     font-size: 1.2rem;
     margin-bottom: 40px;
@@ -1240,10 +1466,7 @@ textarea::placeholder {
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start */
     margin-top: 20px;
-  }
-
-  s .work-section .line {
-    width: 100%;
+    padding-left: 20px;
   }
 
   .first-work-section {
@@ -1257,22 +1480,11 @@ textarea::placeholder {
     margin: 0 8px;
   }
 
-  .workimage,
-  .Multi-post {
-    max-width: 100%;
-    margin: 10px 0;
-    flex: 1 1 auto;
-  }
-
   .work-section h1 {
     margin-bottom: 30px;
     padding-right: 20px;
     white-space: nowrap;
     font-size: clamp(10px, 10vw, 36px);
-  }
-
-  #paragraph {
-    font-size: 25px;
   }
 
   .Multi-post .multipost-skill {
@@ -1304,16 +1516,17 @@ textarea::placeholder {
     bottom: 18%;
   }
 
+  .popupbuttons-items {
+    padding: 5px 10px;
+  }
+
+  .popupmulti-skill {
+    font-size: 10px;
+  }
+
   .Multi-post h1 {
     font-size: 31px;
   }
-}
-
-.first-work-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 50px;
-  justify-content: space-between;
 }
 
 @media (max-width: 320px) {

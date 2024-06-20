@@ -58,37 +58,35 @@
     </div>
 
      <!-- work section -->
-    <div class="work-wrapper">
-        <div class="work-section">
-            <h1>My Recent Works</h1>
-            <div class="line"></div>
-        </div>
-
-        <div class="first-work-section">
-            <div class="workimage">
-                <img src="./images/Img Placeholder (1).png" alt="a picture description of my work">
-            </div>
-        
-            <div class="Multi-post">
+     <div class="work-wrapper">
+         <div class="work-section">
+             <h1>My Recent Works</h1>
+             <div class="line"></div>
+         </div>
+     
+         <div class="first-work-section">
+            <img src="./images/Img Placeholder (1).png" alt="a picture description of my work">
+              <div class="Multi-post">
                 <h1>Multi-Post Services</h1>
                 <p id="paragraph">A daily selection of privately personalized reads; no accounts or sign-up required. This has been the industry standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
                 <button class="multipost-skill">HTML</button>
                 <button class="multipost-skill">CSS</button>
                 <button class="multipost-skill">Javascript</button>
-            
-                <div><button>See project</button></div>
-            </div>
-        </div>
-    </div>
-
+              
+                <div><button onclick="open_popup(0)" id="see-project">See project</button></div>
+              </div>
+         
+         </div>
+     </div>
+     
     <!-- Projects section -->
     <div class="project-container" id="portfolio">
         <div class="grid-container">
           <div class="project-box">
-            <a href="#">
-              <div class="project-content">
-                <h1>Ecommerce Web</h1>
-                <p>This is an ecomerce website</p>
+            <a href="javascript:void(0)">
+              <div onclick="open_popup(1)" class="project-content">
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                 <div class="button-container"> 
                   <button class="skill-button">HTML</button>
                   <button class="skill-button">CSS</button>
@@ -100,10 +98,10 @@
             <div class="hover-effect">See Project</div>
           </div>
           <div class="project-box">
-            <a href="#">
-              <div class="project-content">
-                <h1>Fin. xchange blog</h1>
-                <p>This is for currency trading</p>
+            <a href="javascript:void(0)">
+              <div onclick="open_popup(2)" class="project-content">
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                  <div class="button-container"> 
                 <button class="skill-button">HTML</button>
                 <button class="skill-button">CSS</button>
@@ -115,10 +113,10 @@
             <div class="hover-effect">See Project</div>
           </div>
           <div class="project-box">
-            <a href="#">
-              <div class="project-content">
-                <h1>Charzy Global Services</h1>
-                <p>My graphics and printing business site</p>
+            <a href="javascript:void(0)">
+              <div onclick="open_popup(3)" class="project-content">
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                 <div class="button-container"> 
                   <button class="skill-button">HTML</button>
                   <button class="skill-button">CSS</button>
@@ -130,10 +128,10 @@
             <div class="hover-effect">See Project</div>
           </div>
           <div class="project-box">
-            <a href="#">
-              <div class="project-content">
-                <h1>St. Barnabas Catholic Chaplaincy</h1>
-                <p>A Catholic church website in North Cyprus </p>
+            <a href="javascript:void(0)">
+              <div onclick="open_popup(4)" class="project-content">
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                 <div class="button-container"> 
                   <button class="skill-button">HTML</button>
                   <button class="skill-button">CSS</button>
@@ -145,10 +143,10 @@
             <div class="hover-effect">See Project</div>
           </div>
           <div class="project-box">
-            <a href="#">
-              <div class="project-content">
-                <h1>Charzy Portfolio</h1>
-                <p>This is Charzy's portfolio</p>
+            <a href="javascript:void(0)">
+              <div onclick="open_popup(5)" class="project-content">
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                 <div class="button-container"> 
                   <button class="skill-button">HTML</button>
                   <button class="skill-button">CSS</button>
@@ -159,11 +157,11 @@
             </a>
             <div class="hover-effect">See Project</div>
           </div>
-          <div class="project-box">
-            <a href="#">
+          <div onclick="open_popup(6)" class="project-box">
+            <a href="javascript:void(0)">
               <div class="project-content">
-                <h1>Blog</h1>
-                <p>This blog allows post to be shared</p>
+                <h1>PROFESSIONAL ART PRINTING DATA</h1>
+                <p>A daily selection of privately personalized reads; no accounts or sign-up required. Has been the industry standard.</p>
                 <div class="button-container"> 
                   <button class="skill-button">HTML</button>
                   <button class="skill-button">CSS</button>
@@ -177,6 +175,25 @@
         </div>
       </div>
       
+      <!-- Popup structure -->
+      <div class="modal-popup" id="modal-popup">
+        <div class="popup-contents">
+          <span class="close-btn" id="close-btn">&times;</span>
+          <h2 id="popup-title">my popup</h2>
+          <button class="popupmulti-skill">HTML</button>
+          <button class="popupmulti-skill">CSS</button>
+          <button class="popupmulti-skill">Javascript</button>
+          <div class="imgAndparaph">
+            <img id="popup-image" src="" alt="Project image">
+            <div>
+              <p id="popup-description"></p>
+              <a id="popup-live-link" href="#" target="_blank"><a href="#" class="popupbuttons-items">See live <i class="fa-solid fa-arrow-up-right-from-square"></i></a></a>
+              <a id="popup-source-link" href="#" target="_blank"><a href="#" class="popupbuttons-items">See source <i class="fa-brands fa-github"></i></a></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
     <!-- About me section  -->
     <div class="Aboutme-banner" id="about">
