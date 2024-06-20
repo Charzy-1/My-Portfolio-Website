@@ -143,8 +143,8 @@ a {
 }
 
 #popup-image {
-  width: 200%;
-  height: auto;
+  width: 50vw;
+  height: 65vh;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -838,8 +838,13 @@ textarea::placeholder {
   }
 
   #popup-image {
-    width: 300%;
-  }
+    width: 50vw;
+    height: 27vh;
+}
+
+#popup-description {
+  margin-bottom: 55px;
+}
 
   .project-container .grid-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
@@ -946,6 +951,11 @@ textarea::placeholder {
   .popup-contents {
     width: 90%;
   }
+
+  #popup-image {
+    width: 50vw;
+    height: 30vh;
+}
 
   .workimage img {
     width: 100%;
@@ -1288,8 +1298,9 @@ textarea::placeholder {
   }
 
   #popup-image {
-    max-width: 100%;
-  }
+    width: 90vw;
+    height: 40vh;
+}
 
   .imgAndparaph {
     flex-direction: column;
@@ -1439,6 +1450,10 @@ textarea::placeholder {
     font-size: 10px;
   }
 
+  #popup-image {
+    height: 30vh;
+}
+
   .social-icons {
     bottom: 35%;
   }
@@ -1506,6 +1521,10 @@ textarea::placeholder {
     left: 22%;
     bottom: 32%;
   }
+
+  #popup-image {
+    height: 30vh;
+}
 
   .banner-content p {
     font-size: 1.2rem;
