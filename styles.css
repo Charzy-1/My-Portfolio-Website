@@ -1060,6 +1060,10 @@ textarea::placeholder {
     color: var(--text-color);
     font-size: 1.2rem;
   }
+  
+  .project-container .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .work-section {
     flex-direction: column; /* Stack elements vertically */
@@ -1381,11 +1385,6 @@ textarea::placeholder {
 
   .Multi-post h1 {
     font-size: 38px;
-  }
-
-  .project-container .grid-container {
-    /* margin: 0 20px 0; */
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .Aboutme-banner {
