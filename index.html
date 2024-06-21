@@ -246,21 +246,33 @@
 
     <!-- contact form  -->
     <div class="contact-form" id="contact">
-  <div class="contact-form" id="contact">
-  <div class="contact-section">
-    <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
-    <form id="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST">
-      <div class="form-group">
-        <input type="text" name="first_name" placeholder="First Name" maxlength="30" required>
-        <input type="text" name="last_name" placeholder="Last Name" maxlength="30" required>
+      <div class="contact-section">
+        <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
+        <form id="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST">
+          <div class="form-group-inline">
+            <div class="form-group">
+              <input type="text" name="first_name" placeholder="First Name" maxlength="30" required>
+              <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+              <input type="text" name="last_name" placeholder="Last Name" maxlength="30" required>
+              <small class="error-message"></small>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email address" required>
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Write me something..." maxlength="500" required></textarea>
+            <small class="error-message"></small>
+          </div>
+          <button type="submit" id="submit-button">Get in touch</button>
+          <small id="submit-error" class="error-message"></small>
+        </form>
       </div>
-      <input type="email" name="email" placeholder="Email address" required>
-      <textarea name="message" placeholder="Write me something..." maxlength="500" required></textarea>
-      <button type="submit" id="submit-button">Get in touch</button>
-      <small id="submit-error" class="error-message"></small>
-    </form>
-  </div>
-</div>
+    </div>
+    
 
    <!-- footer -->
    <div class="footer">

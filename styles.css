@@ -356,6 +356,7 @@ a {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 100px 60px;
+  margin-bottom: 20px;
 }
 
 .contact-section p {
@@ -376,6 +377,32 @@ form {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group-inline .form-group {
+  flex: 1 1 45%; /* Adjusts the width of the first name and last name fields */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border: 1px solid red;
 }
 
 input[type="text"],
@@ -387,11 +414,6 @@ input[type="email"] {
   font-size: 1em;
   box-sizing: border-box;
   outline: none;
-}
-
-input[type="text"]:first-child,
-input[type="text"]:last-child {
-  width: 48%;
 }
 
 /* Modifications for message box */
@@ -1120,6 +1142,10 @@ textarea::placeholder {
 
   button {
     align-self: center; /* Center the button */
+  }
+
+  .form-group-inline {
+    flex-direction: column;
   }
 }
 
