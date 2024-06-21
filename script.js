@@ -113,63 +113,79 @@ document.querySelectorAll('.project-box a').forEach(anchor => {
 
 
 
-
-// Use the document.querySelector() method to select the input fields and the form:
+// Select form elements
 const firstnameEl = document.querySelector('input[name="first_name"]');
 const lastnameEl = document.querySelector('input[name="last_name"]');
 const emailEl = document.querySelector('input[name="email"]');
 const messageEl = document.querySelector('textarea[name="message"]');
 const submitErrorEl = document.querySelector('#submit-error');
-
 const form = document.querySelector('#contact-form');
 
-// The isRequired() function returns true if the input argument is not empty:
-const isRequired = value => value !== '';
+// Load data from local storage and pre-fill the form
+document.addEventListener('DOMContentLoaded', (event) => {
+  const formData = JSON.parse(localStorage.getItem('contactFormData'));
+  if (formData) {
+    // Pre-fill form fields with data from local storage
+    firstnameEl.value = formData.first_name || '';
+    lastnameEl.value = formData.last_name || '';
+    emailEl.value = formData.email || '';
+    messageEl.value = formData.message || '';
+  }
+});
 
-// The isBetween() function returns true if the length argument is between the min and max arguments:
-const isBetween = (length, min, max) => length >= min && length <= max;
+// Function to save form data to local storage
+const saveFormData = () => {
+  // Create an object with form data
+  const formData = {
+    first_name: firstnameEl.value.trim(),
+    last_name: lastnameEl.value.trim(),
+    email: emailEl.value.trim(),
+    message: messageEl.value.trim(),
+  };
+  // Save the object to local storage
+  localStorage.setItem('contactFormData', JSON.stringify(formData));
+};
 
-// To check if the email is valid, we use a regular expression:
+// Add input event listeners to save data on change
+firstnameEl.addEventListener('input', saveFormData);
+lastnameEl.addEventListener('input', saveFormData);
+emailEl.addEventListener('input', saveFormData);
+messageEl.addEventListener('input', saveFormData);
+
+// Validation functions
+const isRequired = value => value !== ''; // Check if value is not empty
+const isBetween = (length, min, max) => length >= min && length <= max; // Check if length is within range
 const isEmailValid = (email) => {
+  // Regular expression to validate email format
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 };
 
-// The showError() function highlights the border of the input field and displays an error message if the input field is invalid:
+// Function to show error message
 const showError = (input, message) => {
-  // Get the form-group element
   const formGroup = input.parentElement;
-  // Add the error class
   formGroup.classList.remove('success');
   formGroup.classList.add('error');
-
-  // Show the error message
   const error = formGroup.querySelector('.error-message');
   error.textContent = message;
   error.style.display = 'block';
 };
 
-// The showSuccess() function highlights the input field as valid:
+// Function to show success state
 const showSuccess = (input) => {
-  // Get the form-field element
   const formGroup = input.parentElement;
-
-  // Remove the error class
   formGroup.classList.remove('error');
   formGroup.classList.add('success');
-
-  // Hide the error message
   const error = formGroup.querySelector('.error-message');
   error.textContent = '';
   error.style.display = 'none';
-}
+};
 
-// Function to validate the first name
+// Validation function for first name
 const checkFirstname = () => {
   let valid = false;
   const min = 3, max = 30;
   const firstname = firstnameEl.value.trim();
-
   if (!isRequired(firstname)) {
     showError(firstnameEl, 'Firstname cannot be blank.');
   } else if (!isBetween(firstname.length, min, max)) {
@@ -179,14 +195,13 @@ const checkFirstname = () => {
     valid = true;
   }
   return valid;
-}
+};
 
-// Function to validate the last name
+// Validation function for last name
 const checkLastname = () => {
   let valid = false;
   const min = 3, max = 30;
   const lastname = lastnameEl.value.trim();
-
   if (!isRequired(lastname)) {
     showError(lastnameEl, 'Lastname cannot be blank.');
   } else if (!isBetween(lastname.length, min, max)) {
@@ -196,9 +211,9 @@ const checkLastname = () => {
     valid = true;
   }
   return valid;
-}
+};
 
-// Function to validate the email
+// Validation function for email
 const checkEmail = () => {
   let valid = false;
   const email = emailEl.value.trim();
@@ -211,14 +226,13 @@ const checkEmail = () => {
     valid = true;
   }
   return valid;
-}
+};
 
-// Function to validate the message
+// Validation function for message
 const checkComment = () => {
   let valid = false;
   const min = 3, max = 500;
   const message = messageEl.value.trim();
-
   if (!isRequired(message)) {
     showError(messageEl, 'Message cannot be blank.');
   } else if (!isBetween(message.length, min, max)) {
@@ -228,9 +242,20 @@ const checkComment = () => {
     valid = true;
   }
   return valid;
-}
+};
 
-// Modifying the submit event handler
+// Function to clear form data
+const clearFormData = () => {
+  // Clear input fields
+  firstnameEl.value = '';
+  lastnameEl.value = '';
+  emailEl.value = '';
+  messageEl.value = '';
+  // Clear local storage
+  localStorage.removeItem('contactFormData');
+};
+
+// Form submit event listener
 form.addEventListener('submit', function (e) {
   // Prevent the form from submitting
   e.preventDefault();
@@ -241,12 +266,13 @@ form.addEventListener('submit', function (e) {
       isEmailValid = checkEmail(),
       isCommentValid = checkComment();
 
+  // Check overall form validity
   let isFormValid = isFirstnameValid &&
       isLastnameValid &&
       isEmailValid &&
       isCommentValid;
 
-  // Check if the email is in lower case
+  // Ensure email is in lower case
   const email = emailEl.value.trim();
   const isEmailLowerCase = email === email.toLowerCase();
 
@@ -259,9 +285,36 @@ form.addEventListener('submit', function (e) {
     submitErrorEl.style.display = 'none';
   }
 
-  // Submit to the server if the form is valid
+  // Submit form if valid
   if (isFormValid) {
-    form.submit();
+    // Submit form via AJAX
+    fetch(form.action, {
+      method: form.method,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        first_name: firstnameEl.value.trim(),
+        last_name: lastnameEl.value.trim(),
+        email: emailEl.value.trim(),
+        message: messageEl.value.trim()
+      })
+    }).then(response => {
+      if (response.ok) {
+        // Clear form data on successful submission
+        clearFormData();
+        // Redirect to success page or show success message
+        window.location.href = '/success.html'; // Replace with your success page URL
+      } else {
+        response.json().then(data => {
+          submitErrorEl.textContent = data.error || 'There was an error submitting the form.';
+          submitErrorEl.style.display = 'block';
+        });
+      }
+    }).catch(error => {
+      submitErrorEl.textContent = 'There was an error submitting the form.';
+      submitErrorEl.style.display = 'block';
+    });
   }
 });
 
