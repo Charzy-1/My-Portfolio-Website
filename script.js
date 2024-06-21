@@ -110,3 +110,158 @@ document.querySelectorAll('.project-box a').forEach(anchor => {
     event.preventDefault();
   });
 });
+
+
+
+
+// Use the document.querySelector() method to select the input fields and the form:
+const firstnameEl = document.querySelector('input[name="first_name"]');
+const lastnameEl = document.querySelector('input[name="last_name"]');
+const emailEl = document.querySelector('input[name="email"]');
+const messageEl = document.querySelector('textarea[name="message"]');
+const submitErrorEl = document.querySelector('#submit-error');
+
+const form = document.querySelector('#contact-form');
+
+// The isRequired() function returns true if the input argument is not empty:
+const isRequired = value => value !== '';
+
+// The isBetween() function returns true if the length argument is between the min and max arguments:
+const isBetween = (length, min, max) => length >= min && length <= max;
+
+// To check if the email is valid, we use a regular expression:
+const isEmailValid = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+// The showError() function highlights the border of the input field and displays an error message if the input field is invalid:
+const showError = (input, message) => {
+  // Get the form-group element
+  const formGroup = input.parentElement;
+  // Add the error class
+  formGroup.classList.remove('success');
+  formGroup.classList.add('error');
+
+  // Show the error message
+  const error = formGroup.querySelector('.error-message');
+  error.textContent = message;
+  error.style.display = 'block';
+};
+
+// The showSuccess() function highlights the input field as valid:
+const showSuccess = (input) => {
+  // Get the form-field element
+  const formGroup = input.parentElement;
+
+  // Remove the error class
+  formGroup.classList.remove('error');
+  formGroup.classList.add('success');
+
+  // Hide the error message
+  const error = formGroup.querySelector('.error-message');
+  error.textContent = '';
+  error.style.display = 'none';
+}
+
+// Function to validate the first name
+const checkFirstname = () => {
+  let valid = false;
+  const min = 3, max = 30;
+  const firstname = firstnameEl.value.trim();
+
+  if (!isRequired(firstname)) {
+    showError(firstnameEl, 'Firstname cannot be blank.');
+  } else if (!isBetween(firstname.length, min, max)) {
+    showError(firstnameEl, `Firstname must be between ${min} and ${max} characters.`);
+  } else {
+    showSuccess(firstnameEl);
+    valid = true;
+  }
+  return valid;
+}
+
+// Function to validate the last name
+const checkLastname = () => {
+  let valid = false;
+  const min = 3, max = 30;
+  const lastname = lastnameEl.value.trim();
+
+  if (!isRequired(lastname)) {
+    showError(lastnameEl, 'Lastname cannot be blank.');
+  } else if (!isBetween(lastname.length, min, max)) {
+    showError(lastnameEl, `Lastname must be between ${min} and ${max} characters.`);
+  } else {
+    showSuccess(lastnameEl);
+    valid = true;
+  }
+  return valid;
+}
+
+// Function to validate the email
+const checkEmail = () => {
+  let valid = false;
+  const email = emailEl.value.trim();
+  if (!isRequired(email)) {
+    showError(emailEl, 'Email cannot be blank.');
+  } else if (!isEmailValid(email)) {
+    showError(emailEl, 'Email is not valid.');
+  } else {
+    showSuccess(emailEl);
+    valid = true;
+  }
+  return valid;
+}
+
+// Function to validate the message
+const checkComment = () => {
+  let valid = false;
+  const min = 3, max = 500;
+  const message = messageEl.value.trim();
+
+  if (!isRequired(message)) {
+    showError(messageEl, 'Message cannot be blank.');
+  } else if (!isBetween(message.length, min, max)) {
+    showError(messageEl, `Message must be between ${min} and ${max} characters.`);
+  } else {
+    showSuccess(messageEl);
+    valid = true;
+  }
+  return valid;
+}
+
+// Modifying the submit event handler
+form.addEventListener('submit', function (e) {
+  // Prevent the form from submitting
+  e.preventDefault();
+
+  // Validate form fields
+  let isFirstnameValid = checkFirstname(),
+      isLastnameValid = checkLastname(),
+      isEmailValid = checkEmail(),
+      isCommentValid = checkComment();
+
+  let isFormValid = isFirstnameValid &&
+      isLastnameValid &&
+      isEmailValid &&
+      isCommentValid;
+
+  // Check if the email is in lower case
+  const email = emailEl.value.trim();
+  const isEmailLowerCase = email === email.toLowerCase();
+
+  if (!isEmailLowerCase) {
+    submitErrorEl.textContent = 'Email must be in lower case.';
+    submitErrorEl.style.display = 'block';
+    isFormValid = false;
+  } else {
+    submitErrorEl.textContent = '';
+    submitErrorEl.style.display = 'none';
+  }
+
+  // Submit to the server if the form is valid
+  if (isFormValid) {
+    form.submit();
+  }
+});
+

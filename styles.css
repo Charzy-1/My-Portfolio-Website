@@ -356,6 +356,8 @@ a {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 100px 60px;
+  margin-bottom: 20px;
+  gap: 20px;
 }
 
 .contact-section p {
@@ -365,36 +367,6 @@ a {
   font-weight: bold;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 65%;
-}
-
-.form-group {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input[type="text"],
-input[type="email"] {
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  font-size: 1em;
-  box-sizing: border-box;
-  outline: none;
-}
-
-input[type="text"]:first-child,
-input[type="text"]:last-child {
-  width: 48%;
-}
-
-/* Modifications for message box */
 textarea {
   width: 100%;
   padding: 10px 50px 60px 10px;
@@ -407,12 +379,6 @@ textarea {
   resize: vertical;
   margin: 20px 0 30px 0;
   color: black;
-}
-
-textarea::placeholder {
-  font-size: 1.4em; /* Adjust the font size as needed */
-
-  /* color: black; */
 }
 
 textarea::-webkit-input-placeholder {
@@ -439,6 +405,69 @@ textarea:-moz-placeholder {
   font-weight: bold;
 }
 
+input:invalid,
+textarea:invalid {
+  border-color: rgb(196, 176, 176);
+}
+
+input:valid,
+textarea:valid {
+  border-color: green;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 65%;
+}
+
+.form-group {
+  display: block;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group-inline .form-group {
+  flex: 1 1 45%; /* Adjusts the width of the first name and last name fields */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border: 1px solid red;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  box-sizing: border-box;
+  outline: none;
+}
+
+textarea::placeholder {
+  font-size: 1.4em; /* Adjust the font size as needed */
+}
+
 .text-content p {
   flex: 1; /* Allow paragraph to grow and fill remaining space */
   margin: 0 20px 0 0;
@@ -462,16 +491,6 @@ button {
 
 button:hover {
   background-color: rgb(156, 57, 11);
-}
-
-input:invalid,
-textarea:invalid {
-  border-color: rgb(196, 176, 176);
-}
-
-input:valid,
-textarea:valid {
-  border-color: green;
 }
 
 button:disabled {
@@ -1120,6 +1139,10 @@ textarea::placeholder {
 
   button {
     align-self: center; /* Center the button */
+  }
+
+  .form-group-inline {
+    flex-direction: column;
   }
 }
 
